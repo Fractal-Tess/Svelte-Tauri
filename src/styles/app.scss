@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+body,
+html {
+  // Fix tailwindcss/daisyUI applying color to the body tag
+  background-color: transparent !important;
+  @apply rounded-3xl overflow-hidden;
+}
+
+/* css vars */
+* {
+  @apply transition-all;
+
+  --transition-duration-short: 0.15s;
+  --transition-duration-long: 0.4s;
+
+  --ease-1: cubic-bezier(0.25, 0, 0.5, 1);
+  --ease-2: cubic-bezier(0.25, 0, 0.4, 1);
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+  --ease-4: cubic-bezier(0.25, 0, 0.2, 1);
+  --ease-5: cubic-bezier(0.25, 0, 0.1, 1);
+
+  --ease-out-1: cubic-bezier(0, 0, 0.75, 1);
+  --ease-out-2: cubic-bezier(0, 0, 0.5, 1);
+  --ease-out-3: cubic-bezier(0, 0, 0.3, 1);
+  --ease-out-4: cubic-bezier(0, 0, 0.1, 1);
+  --ease-out-5: cubic-bezier(0, 0, 0, 1);
+
+  --ease-elastic-1: cubic-bezier(0.5, 0.75, 0.75, 1.25);
+  --ease-elastic-2: cubic-bezier(0.5, 1, 0.75, 1.25);
+  --ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+  --ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+  --ease-elastic-5: cubic-bezier(0.5, 1.75, 0.75, 1.25);
+}
+
+.dev {
+  outline: 2px solid red;
+}
+.dev-border {
+  border: 3px solid red;
+}
