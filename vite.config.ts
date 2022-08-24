@@ -8,17 +8,17 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@use "src/styles/variables.scss" as *;',
-      },
-    },
+        additionalData: '@use "src/styles/variables.scss" as *;'
+      }
+    }
   },
 
   resolve: {
     alias: {
       $styles: resolve('src/styles/app.scss'),
       $lib: resolve('src/lib'),
-      $src: resolve('src/'),
-    },
+      $src: resolve('src/')
+    }
   },
 
   publicDir: false,
@@ -27,7 +27,7 @@ export default defineConfig({
 
   server: {
     strictPort: true,
-    port: 3000,
+    port: 3000
   },
 
   envPrefix: ['VITE_', 'TAURI_'],
@@ -35,6 +35,6 @@ export default defineConfig({
   build: {
     target: ['es2021', 'chrome100', 'safari13'],
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
-    sourcemap: !!process.env.TAURI_DEBUG,
-  },
+    sourcemap: !!process.env.TAURI_DEBUG
+  }
 });

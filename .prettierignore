@@ -1,0 +1,5 @@
+target
+dist
+
+*.min.js
+*.min.css

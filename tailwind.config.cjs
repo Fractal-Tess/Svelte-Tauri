@@ -10,9 +10,9 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['roboto', ...defaultTheme.fontFamily.sans],
-      },
-    },
+        sans: ['roboto', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
 
   daisyui: {
@@ -28,7 +28,7 @@ const config = {
           info: '#93BADC',
           success: '#12A168',
           warning: '#F4C857',
-          error: '#DE3B4E',
+          error: '#DE3B4E'
         },
         dark: {
           ...require('daisyui/src/colors/themes')['[data-theme=dark]'],
@@ -40,12 +40,12 @@ const config = {
           info: '#35B0F3',
           success: '#1B743C',
           warning: '#F38A12',
-          error: '#F2215C',
-        },
-      },
-    ],
+          error: '#F2215C'
+        }
+      }
+    ]
   },
-  plugins: [forms, typography, daisyui],
+  plugins: [forms, typography, daisyui]
 };
 
 module.exports = config;
