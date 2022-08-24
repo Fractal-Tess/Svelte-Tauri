@@ -10,9 +10,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Fira Sans', ...defaultTheme.fontFamily.sans],
-        mono: ['Fira Mono', ...defaultTheme.fontFamily.mono],
-        code: ['Fira Code'],
+        sans: ['roboto', ...defaultTheme.fontFamily.sans],
       },
     },
   },
