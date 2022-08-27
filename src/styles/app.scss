@@ -18,6 +18,7 @@ html {
 * {
   @apply transition-all;
 
+  // TODO: Remove all transitions here and rework the theme changing button
   --transition-duration-short: 0.15s;
   --transition-duration-long: 0.4s;
 
