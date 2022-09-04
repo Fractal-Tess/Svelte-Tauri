@@ -15,6 +15,7 @@
       "$styles": ["src/styles/app.scss"],
       "$src": ["src/"],
       "$src/*": ["src/*"],
+      "$assets":["src/assets"],
       "$assets/*":["src/assets/*"]
     }
   },
