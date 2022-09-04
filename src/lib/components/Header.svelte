@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ThemeToggleIcon from '$lib/example/header/ThemeToggleIcon.svelte';
+  import ThemeToggleIcon from '$lib/components/ThemeToggleIcon.svelte';
   import { theme } from '$lib/stores/theme';
   import { appWindow } from '@tauri-apps/api/window';
 </script>
@@ -17,6 +17,13 @@
   </button>
 
   <div>
+    <a
+      target="_blank"
+      href="https://github.com/Fractal-Tess/Svelte-Tauri"
+      class="hover:text-secondary"
+    >
+      <i class="fa-brands fa-github h-6" />
+    </a>
     <button
       on:click={appWindow.minimize}
       aria-live="polite"

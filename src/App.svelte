@@ -1,9 +1,8 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
 
-  import Header from '$lib/example/header/Header.svelte';
+  import Header from '$lib/components/Header.svelte';
   import Index from '$lib/Index.svelte';
-  import Footer from '$lib/example/footer/Footer.svelte';
 
   import { theme } from '$lib/stores/theme';
 
@@ -21,6 +20,5 @@
     <main class="flex-1" in:fade={{ delay: 300, duration: 1000 }}>
       <Index />
     </main>
-    <Footer />
   </div>
 {/await}
