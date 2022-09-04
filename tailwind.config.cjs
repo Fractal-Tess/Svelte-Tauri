@@ -35,7 +35,7 @@ const config = {
           primary: '#137cb5',
           secondary: '#e80d52',
           accent: '#f4cd73',
-          neutral: '#1F1721',
+          neutral: '#272727',
           'base-100': '#1e1e1e',
           info: '#35B0F3',
           success: '#1B743C',
