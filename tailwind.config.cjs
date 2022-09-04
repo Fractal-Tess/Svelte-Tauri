@@ -36,7 +36,7 @@ const config = {
           secondary: '#e80d52',
           accent: '#f4cd73',
           neutral: '#1F1721',
-          'base-100': '#2B3440',
+          'base-100': '#1e1e1e',
           info: '#35B0F3',
           success: '#1B743C',
           warning: '#F38A12',
