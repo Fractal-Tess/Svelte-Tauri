@@ -10,7 +10,7 @@ The extra additions include packages and systems and functionality such as:
 - Tauri window state manager plugin
 - Tauri store plugin
 - Fontawesome
-
+- Roboto Font
 
 
 <div align="center">
