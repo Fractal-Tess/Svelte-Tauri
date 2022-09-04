@@ -14,7 +14,8 @@
       "$lib/*": ["src/lib/*"],
       "$styles": ["src/styles/app.scss"],
       "$src": ["src/"],
-      "$src/*": ["src/*"]
+      "$src/*": ["src/*"],
+      "$assets/*":["src/assets/*"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],

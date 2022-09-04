@@ -16,8 +16,9 @@ export default defineConfig({
   resolve: {
     alias: {
       $styles: resolve('src/styles/app.scss'),
-      $lib: resolve('src/lib'),
-      $src: resolve('src/')
+      $lib: resolve('src/lib/'),
+      $src: resolve('src/'),
+      $assets:resolve('src/assets/')
     }
   },
 
