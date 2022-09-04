@@ -1,6 +1,6 @@
 ## Svelte/Tauri template
 
-#### A extremely simple bare bones Svelte/Tauri template with some extra additions for ease of use out of the box.
+#### An extremely simple bare bones Svelte/Tauri template with some extra additions for ease of use out of the box.
 The extra additions include packages and systems and functionality such as:
 - Scss
 - Tailwind
