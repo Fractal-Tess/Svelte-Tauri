@@ -2,6 +2,9 @@
   import ThemeToggleIcon from '$lib/components/ThemeToggleIcon.svelte';
   import { theme } from '$lib/stores/theme';
   import { appWindow } from '@tauri-apps/api/window';
+  import { faXmark, faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
+  import { faGithub } from '@fortawesome/free-brands-svg-icons';
+  import Fa from 'svelte-fa';
 </script>
 
 <div
@@ -20,23 +23,23 @@
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
-      class="hover:text-secondary"
+      class="hover:text-secondary  inline-block"
     >
-      <i class="fa-brands fa-github h-6" />
+      <Fa icon={faGithub} size="lg" />
     </a>
     <button
       on:click={appWindow.minimize}
       aria-live="polite"
-      class="p-2 text-xl hover:text-secondary h-full"
+      class="p-2 text-xl hover:text-secondary"
     >
-      <i class="fa-solid fa-window-minimize w-6" />
+      <Fa icon={faWindowMinimize} />
     </button>
     <button
       on:click={appWindow.close}
       aria-live="polite"
-      class="p-2 text-2xl hover:text-secondary h-full"
+      class="p-2 text-2xl hover:text-secondary"
     >
-      <i class="fa-solid fa-xmark w-6" />
+      <Fa icon={faXmark} />
     </button>
   </div>
 </div>
