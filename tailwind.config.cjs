@@ -19,7 +19,6 @@ const config = {
     themes: [
       {
         light: {
-          ...require('daisyui/src/colors/themes')['[data-theme=light]'],
           primary: '#e863d6',
           secondary: '#7bc3e0',
           accent: '#cd97fc',
@@ -31,7 +30,6 @@ const config = {
           error: '#DE3B4E'
         },
         dark: {
-          ...require('daisyui/src/colors/themes')['[data-theme=dark]'],
           primary: '#137cb5',
           secondary: '#e80d52',
           accent: '#f4cd73',
