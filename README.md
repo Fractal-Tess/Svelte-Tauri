@@ -1,7 +1,7 @@
 ## Svelte/Tauri Template
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/app.jpg" width="580" style="border-radius:2rem"/>
+<img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/app.png" width="580" style="border-radius:2rem"/>
 </div>
 </div>
 
