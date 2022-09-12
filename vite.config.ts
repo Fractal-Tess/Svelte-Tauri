@@ -5,17 +5,9 @@ import { resolve } from 'node:path';
 export default defineConfig({
   plugins: [svelte()],
 
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: '@use "src/styles/variables.scss" as *;'
-      }
-    }
-  },
-
   resolve: {
     alias: {
-      $styles: resolve('src/styles/app.scss'),
+      $styles: resolve('src/styles/app.postcss'),
       $lib: resolve('src/lib/'),
       $src: resolve('src/'),
       $assets:resolve('src/assets/')
