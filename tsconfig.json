@@ -12,7 +12,7 @@
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
-      "$styles": ["src/styles/app.scss"],
+      "$styles": ["src/styles/app.postcss"],
       "$src": ["src/"],
       "$src/*": ["src/*"],
       "$assets":["src/assets"],
