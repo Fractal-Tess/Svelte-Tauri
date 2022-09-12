@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "pnpm svelte:build",
-    "beforeDevCommand": "pnpm svelte:dev",
+    "beforeBuildCommand": "yarn svelte:build",
+    "beforeDevCommand": "yarn svelte:dev",
     "devPath": "http://localhost:3000",
     "distDir": "../dist"
   },
