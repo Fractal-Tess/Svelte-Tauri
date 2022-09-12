@@ -1,15 +1,15 @@
+@import '@fontsource/roboto/index.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import '@fontsource/roboto/index.css';
 
 html {
   -webkit-font-smoothing: antialiased;
 }
 body,
 html {
-  // Fix tailwindcss/daisyUI applying color to the body tag
+  /* Fix tailwindcss/daisyUI applying color to the body tag */
   background-color: transparent !important;
   @apply rounded-3xl overflow-hidden;
 }
@@ -18,7 +18,10 @@ html {
   @apply transition-all;
 }
 
-// Class is used for development purposes only.
-.dev {
-  border: 1px solid red;
+
+@layer utilities {
+  /* Class is used for development purposes only */
+  .dev {
+    border: 1px solid red;
+  }
 }
