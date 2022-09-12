@@ -9,7 +9,6 @@
 
 The extra additions include packages and systems and functionality such as:
 
-- Scss
 - Tailwind
 - DaisyUI
 - Typescript
