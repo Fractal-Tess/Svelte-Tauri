@@ -10,7 +10,7 @@ export default defineConfig({
       $styles: resolve('src/styles/app.postcss'),
       $lib: resolve('src/lib/'),
       $src: resolve('src/'),
-      $assets:resolve('src/assets/')
+      $assets: resolve('src/assets/')
     }
   },
 
