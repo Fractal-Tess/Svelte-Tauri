@@ -7,8 +7,8 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "svelte-tauri-template",
-    "version": "0.1.0"
+    "productName": "svelte-tauri",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -55,7 +55,7 @@
     },
     "windows": [
       {
-        "title": "Svelte-Tauri Template",
+        "title": "Svelte-Tauri",
         "width": 900,
         "height": 600,
         "fullscreen": false,
