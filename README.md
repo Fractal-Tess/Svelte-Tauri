@@ -17,3 +17,4 @@ The extra additions include packages and systems and functionality such as:
 - Tauri store plugin
 - Fontawesome
 - Roboto Font
+- Husky

@@ -637,6 +637,11 @@ has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
+husky@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.1.tgz#511cb3e57de3e3190514ae49ed50f6bc3f50b3e9"
+  integrity sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==
+
 import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -1093,7 +1098,7 @@ tailwindcss@^3, tailwindcss@^3.1.8:
   version "0.1.0"
   resolved "https://codeload.github.com/tauri-apps/tauri-plugin-store/tar.gz/6163c041d7d7ab2dc50e01ba5161da4f3d1d548e"
   dependencies:
-    "@tauri-apps/api" "1.0.2"
+    "@tauri-apps/api" "1.0.1"
     tslib "2.4.0"
 
 to-regex-range@^5.0.1:
