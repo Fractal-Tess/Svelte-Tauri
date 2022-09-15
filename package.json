@@ -3,6 +3,16 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "license": "MIT",
+  "author": {
+    "email": "vgfractal@gmail.com",
+    "name": "Vilian Gerdzhikov",
+    "url": "https://gist.github.com/Fractal-Tess"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Fractal-Tess/Svelte-Tauri"
+  },
   "scripts": {
     "start": "tauri dev",
     "dev": "tauri dev",
