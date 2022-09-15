@@ -7,11 +7,12 @@
     "start": "tauri dev",
     "dev": "tauri dev",
     "build": "tauri build",
-    "format": "prettier --write --plugin-search-dir=. .",
+    "format": "prettier --write .",
     "svelte:dev": "vite dev",
     "svelte:build": "vite build",
     "svelte:preview": "vite preview",
-    "svelte:check": "svelte-check --tsconfig ./tsconfig.json"
+    "svelte:check": "svelte-check --tsconfig ./tsconfig.json",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "@fontsource/roboto": "^4.5.8",
