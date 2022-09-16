@@ -1,31 +1,30 @@
 {
   "name": "svelte-tauri",
-  "private": true,
   "version": "0.0.1",
-  "type": "module",
-  "license": "MIT",
-  "author": {
-    "email": "vgfractal@gmail.com",
-    "name": "Vilian Gerdzhikov",
-    "url": "https://gist.github.com/Fractal-Tess"
-  },
+  "private": true,
   "repository": {
     "type": "github",
     "url": "https://github.com/Fractal-Tess/Svelte-Tauri"
   },
-  "scripts": {
-    "start": "tauri dev",
-    "dev": "tauri dev",
-    "build": "tauri build",
-    "lint": "prettier --check . && eslint .",
-    "format": "prettier --write .",
-    "svelte:dev": "vite dev",
-    "svelte:build": "vite build",
-    "svelte:preview": "vite preview",
-    "svelte:check": "svelte-check --tsconfig ./tsconfig.json",
-    "postinstall": "husky install"
+  "license": "MIT",
+  "author": {
+    "name": "Vilian Gerdzhikov",
+    "email": "vgfractal@gmail.com",
+    "url": "https://gist.github.com/Fractal-Tess"
   },
-  "packageManager": "yarn@1.22.19",
+  "type": "module",
+  "scripts": {
+    "build": "tauri build",
+    "dev": "tauri dev",
+    "format": "prettier --write .",
+    "postinstall": "husky install",
+    "lint": "prettier --check . && eslint .",
+    "start": "tauri dev",
+    "svelte:build": "vite build",
+    "svelte:check": "svelte-check --tsconfig ./tsconfig.json",
+    "svelte:dev": "vite dev",
+    "svelte:preview": "vite preview"
+  },
   "devDependencies": {
     "@fontsource/roboto": "^4.5.8",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -58,5 +57,6 @@
     "tslib": "^2.4.0",
     "typescript": "^4.8.3",
     "vite": "^3.1.0"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
