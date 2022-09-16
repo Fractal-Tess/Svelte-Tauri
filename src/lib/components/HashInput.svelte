@@ -2,7 +2,7 @@
   import { invoke } from '@tauri-apps/api';
 
   let hashInput = 'Hello world';
-  let hashOutput: string = '';
+  let hashOutput = '';
   $: (async () => {
     hashOutput = await invoke('hash256sum', { hashInput });
   })();
