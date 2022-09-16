@@ -1,6 +1,8 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
 
+  import { createTracing } from 'trace_events';
+
   import Header from '$lib/components/Header.svelte';
   import Index from '$lib/Index.svelte';
 
