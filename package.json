@@ -17,6 +17,7 @@
     "build": "tauri build",
     "dev": "tauri dev",
     "format": "prettier --write .",
+    "preinstall": "npx only-allow yarn",
     "postinstall": "husky install",
     "lint": "prettier --check . && eslint .",
     "start": "tauri dev",
