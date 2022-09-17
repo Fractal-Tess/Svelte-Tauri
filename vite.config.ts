@@ -1,16 +1,17 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { resolve } from 'node:path';
+import { join } from 'node:path';
+
+console.log(__dirname);
 
 export default defineConfig({
   plugins: [svelte()],
 
   resolve: {
     alias: {
-      $styles: resolve('src/styles/app.postcss'),
-      $lib: resolve('src/lib/'),
-      $src: resolve('src/'),
-      $assets: resolve('src/assets/')
+      $lib: join(__dirname, 'src/lib'),
+      $assets: join(__dirname, 'src/assets/'),
+      $styles: join(__dirname, 'src/styles/app.postcss')
     }
   },
 

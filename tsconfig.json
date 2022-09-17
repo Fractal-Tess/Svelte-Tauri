@@ -13,8 +13,6 @@
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
       "$styles": ["src/styles/app.postcss"],
-      "$src": ["src/"],
-      "$src/*": ["src/*"],
       "$assets": ["src/assets"],
       "$assets/*": ["src/assets/*"]
     }
