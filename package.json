@@ -18,7 +18,7 @@
     "dev": "tauri dev",
     "format": "prettier --write .",
     "postinstall": "husky install",
-    "lint": "prettier --check . && eslint .",
+    "lint": "eslint .",
     "svelte:build": "vite build",
     "svelte:check": "svelte-check --tsconfig ./tsconfig.json",
     "svelte:dev": "vite dev",

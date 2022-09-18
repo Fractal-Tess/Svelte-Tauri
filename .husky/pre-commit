@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm lint
+# If not using pnpm, switch this to your package manager
 pnpm format
+pnpm lint
