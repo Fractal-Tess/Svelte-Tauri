@@ -13,31 +13,32 @@
 >
   <button
     on:click={theme.toggleTheme}
-    class="hover:text-secondary ml-2"
+    class="hover:text-primary ml-2"
     aria-live="polite"
   >
-    <ThemeToggleIcon cssClass={'w-8'} />
+    <ThemeToggleIcon class="w-8" />
   </button>
 
-  <div>
+  <!-- TODO: Investigate why hovering over the icons is laggy -->
+  <div class="flex [&>*]:px-2 h-full">
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
-      class="hover:text-secondary  inline-block"
+      class="hover:text-primary flex items-center"
     >
       <Fa icon={faGithub} size="lg" />
     </a>
     <button
       on:click={appWindow.minimize}
       aria-live="polite"
-      class="p-2 text-xl hover:text-secondary"
+      class="text-xl hover:text-primary"
     >
       <Fa icon={faWindowMinimize} />
     </button>
     <button
       on:click={appWindow.close}
       aria-live="polite"
-      class="p-2 text-2xl hover:text-secondary"
+      class="text-2xl hover:text-primary"
     >
       <Fa icon={faXmark} />
     </button>
