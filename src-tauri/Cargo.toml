@@ -5,7 +5,7 @@ description = "Svelte-Tauri Template"
 authors = ["Fractal-Tess"]
 license = "MIT"
 repository = "https://github.com/Fractal-Tess/Svelte-Tauri"
-default-run = "app"
+default-run = "svelte-tauri"
 edition = "2021"
 rust-version = "1.57"
 
