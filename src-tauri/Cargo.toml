@@ -1,10 +1,10 @@
 [package]
-name = "app"
-version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+name = "svelte-tauri"
+version = "0.0.1"
+description = "Svelte-Tauri Template"
+authors = ["Fractal-Tess"]
+license = "MIT"
+repository = "https://github.com/Fractal-Tess/Svelte-Tauri"
 default-run = "app"
 edition = "2021"
 rust-version = "1.57"
