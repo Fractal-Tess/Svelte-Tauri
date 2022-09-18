@@ -8,7 +8,6 @@
   })();
 </script>
 
-<span class="text-center -mb-4 text-md">{hashOutput}</span>
 <div class="form-control">
   <label class="input-group">
     <span>Hash string</span>
@@ -19,3 +18,4 @@
     />
   </label>
 </div>
+<span class="text-center text-md">{hashOutput}</span>
