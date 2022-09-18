@@ -13,7 +13,7 @@
 >
   <button
     on:click={theme.toggleTheme}
-    class="hover:text-primary ml-2"
+    class="hover:text-secondary ml-2"
     aria-live="polite"
   >
     <ThemeToggleIcon class="w-8" />
@@ -24,21 +24,21 @@
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
-      class="hover:text-primary flex items-center"
+      class="hover:text-secondary flex items-center"
     >
       <Fa icon={faGithub} size="lg" />
     </a>
     <button
       on:click={appWindow.minimize}
       aria-live="polite"
-      class="text-xl hover:text-primary"
+      class="text-xl hover:text-secondary"
     >
       <Fa icon={faWindowMinimize} />
     </button>
     <button
       on:click={appWindow.close}
       aria-live="polite"
-      class="text-2xl hover:text-primary"
+      class="text-2xl hover:text-secondary"
     >
       <Fa icon={faXmark} />
     </button>
