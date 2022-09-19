@@ -5,9 +5,7 @@
 </div>
 </div>
 
-#### An extremely simple bare bones Svelte/Tauri template with some extra additions for ease of use out of the box.
-
-The extra additions include packages and systems and functionality such as:
+#### A simple Svelte-Tauri starter with a few opinionated additions.
 
 - Tailwind
 - DaisyUI
