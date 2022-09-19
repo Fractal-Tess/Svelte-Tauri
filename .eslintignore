@@ -1,7 +1,22 @@
-# v 0.1
+# v 0.2
 # Minified files 
 *.min.*
 *.min.*
+
+# Husky
+.husky/*
+
+# Git
+.gitignore
+
+# Eslint
+.eslintignore 
+
+# Self
+.prettierignore
+
+# Pnpm
+pnpm-lock.yaml
 
 # dotenv environment variable files
 .env
@@ -9,9 +24,6 @@
 .env.test.local
 .env.production.local
 .env.local
-
-# Fix: .eslintignore is being threated as a markdown
-.eslintignore
 
 # Runtime data
 pids

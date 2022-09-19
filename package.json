@@ -24,6 +24,12 @@
     "svelte:dev": "vite dev",
     "svelte:preview": "vite preview"
   },
+  "lint-staged": {
+    "*": [
+      "prettier --write",
+      "eslint"
+    ]
+  },
   "devDependencies": {
     "@fontsource/roboto": "^4.5.8",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
@@ -43,6 +49,7 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.16",
     "postcss-load-config": "^4.0.1",
     "prettier": "^2.7.1",
