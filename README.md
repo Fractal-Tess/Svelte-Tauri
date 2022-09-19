@@ -5,7 +5,7 @@
 </div>
 </div>
 
-#### A simple Svelte-Tauri starter with a few opinionated additions.
+#### A simple SvelteKit-Tauri starter with a few opinionated additions.
 
 - Tailwind
 - DaisyUI
