@@ -1,4 +1,4 @@
-## Svelte/Tauri Template <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/st-1024.png" width="20" />
+## Svelte/Tauri Template <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/st-1024.png" width="30" align="center" />
 
 <div align="center">
 
