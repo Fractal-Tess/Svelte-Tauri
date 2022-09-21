@@ -18,4 +18,4 @@
     />
   </label>
 </div>
-<span class="text-center text-md">{hashOutput}</span>
+<p class="text-center text-sm">{hashOutput}</p>
