@@ -7,12 +7,15 @@
 
 #### A simple SvelteKit-Tauri starter with a few opinionated additions.
 
-- Tailwind
-- DaisyUI
-- Typescript
-- Prettier
-- Tauri window state manager plugin
-- Tauri store plugin
-- Fontawesome
-- Roboto Font
-- Husky
+- UI:
+  - Tailwind
+  - DaisyUI
+  - Fontawesome
+  - Roboto Font
+- Code Quality
+  - Prettier
+  - Eslint
+- Tauri
+  - Tauri window state manager plugin
+  - Tauri store plugin
+  - Husky
