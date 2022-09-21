@@ -1,7 +1,7 @@
 [package]
 name = "svelte-tauri"
 version = "0.0.1"
-description = "Svelte-Tauri Template"
+description = "Svelte-Tauri template starter"
 authors = ["Fractal-Tess"]
 license = "MIT"
 repository = "https://github.com/Fractal-Tess/Svelte-Tauri"
