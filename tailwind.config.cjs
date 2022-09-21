@@ -17,9 +17,9 @@ const config = {
     themes: [
       {
         light: {
-          primary: '#e863d6',
-          secondary: '#7bc3e0',
-          accent: '#cd97fc',
+          primary: '#24c8db',
+          secondary: '#f73c00',
+          accent: '#ffc131',
           neutral: '#25343C',
           'base-100': '#F8F8FB',
           info: '#93BADC',
@@ -28,9 +28,9 @@ const config = {
           error: '#DE3B4E'
         },
         dark: {
-          primary: '#137cb5',
-          secondary: '#e80d52',
-          accent: '#f4cd73',
+          primary: '#24c8db',
+          secondary: '#f73c00',
+          accent: '#ffc131',
           neutral: '#2b2b2b',
           'base-100': '#1f1f1f',
           info: '#35B0F3',
