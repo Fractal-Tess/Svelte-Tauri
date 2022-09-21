@@ -7,6 +7,7 @@
 
 #### A simple Svelte-Tauri starter with a few opinionated additions.
 
+- Typescript
 - UI:
   - Tailwind
   - DaisyUI
