@@ -15,6 +15,9 @@
 # Prettier
 .prettierignore
 
+# Markdown files
+*.md
+
 # Pnpm
 pnpm-lock.yaml
 
