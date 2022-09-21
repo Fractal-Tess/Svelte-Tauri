@@ -1,16 +1,20 @@
 <script lang="ts">
   import CallTauri from '$lib/components/CallTauri.svelte';
-  import HashInput from '$lib/components/HashInput.svelte';
+  import HashString from '$lib/components/HashString.svelte';
+  import Versions from '$lib/components/Versions.svelte';
 </script>
 
-<div class="flex flex-col gap-8 items-center font-bold drop-shadow-ft">
+<div class="flex flex-col space-y-6 items-center font-bold drop-shadow-ft">
   <h1 class="text-4xl mt-16">Welcome</h1>
   <h2 class="text-xl">
     This is a <span class="bg-secondary text-secondary-content rounded-md p-1"
-      >Svelte Tauri</span
-    > Template
+      >Svelte
+    </span>
+    -
+    <span class="bg-primary text-primary-content rounded-md p-1"> Tauri</span> Template
   </h2>
 
   <CallTauri />
-  <HashInput />
+  <HashString />
+  <Versions />
 </div>
