@@ -2,8 +2,6 @@ import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { join } from 'node:path';
 
-console.log(__dirname);
-
 export default defineConfig({
   plugins: [svelte()],
 
