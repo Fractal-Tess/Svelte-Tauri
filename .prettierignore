@@ -12,7 +12,7 @@
 # Eslint
 .eslintignore 
 
-# Self
+# Prettier
 .prettierignore
 
 # Pnpm
