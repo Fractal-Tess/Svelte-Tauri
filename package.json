@@ -26,7 +26,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,ts,svelte}": "eslint --cache --fix",
-    "src/**/*.{js,ts,svelte,css,scss,postcss,md}": "prettier --write --ignore-unknown"
+    "src/**/*.{js,ts,svelte,css,scss,postcss,md,json}": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
     "@fontsource/roboto": "^4.5.8",
