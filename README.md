@@ -6,7 +6,7 @@
 </div>
 </div>
 
-#### A simple Svelte-Tauri starter with a few opinionated additions.
+#### A simple Svelte-Tauri starter with a few opinionated additions:
 
 - Typescript
 - UI:
