@@ -7,18 +7,21 @@
   };
 
   const getVersions = async (): Promise<Versions> => {
-    const versions = {} as Versions;
-    [versions.tauri, versions.app, versions.name] = await Promise.all([
+    const [tauri, app, name] = await Promise.all([
       getTauriVersion(),
       getVersion(),
       getName()
     ]);
-    return versions;
+    return {
+      tauri,
+      app,
+      name
+    };
   };
 </script>
 
 <h3>Versions</h3>
-<div class="grid grid-cols-1">
+<div>
   {#await getVersions() then versions}
     {#each Object.entries(versions) as [key, val], i (i)}
       <div>
