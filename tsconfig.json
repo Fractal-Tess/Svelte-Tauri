@@ -8,13 +8,15 @@
     "baseUrl": ".",
     "allowJs": true,
     "checkJs": true,
-    "isolatedModules": true,
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
       "$styles": ["src/styles/app.postcss"],
       "$assets": ["src/assets"],
-      "$assets/*": ["src/assets/*"]
+      "$assets/*": ["src/assets/*"],
+      "$router/*": ["src/lib/router/*"],
+      "$layout/*": ["src/lib/layout/*"],
+      "$types": ["src/types.ts"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],

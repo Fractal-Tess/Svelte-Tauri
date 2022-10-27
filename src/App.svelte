@@ -1,10 +1,7 @@
 <script lang="ts">
-  import { fade } from 'svelte/transition';
-
-  import Header from '$lib/components/Header.svelte';
-  import Index from '$lib/Index.svelte';
-
   import { theme } from '$lib/stores/theme';
+  import Router from '$lib/router/Router.svelte';
+  import BaseLayout from '$lib/layout/BaseLayout.svelte';
 
   $: {
     document.documentElement.setAttribute('data-theme', $theme);
@@ -13,12 +10,7 @@
 </script>
 
 {#await theme.load() then}
-  <div
-    class="font-sans bg-base-100 text-base-content h-screen flex flex-col overflow-y-auto overflow-x-hidden"
-  >
-    <Header />
-    <main class="flex-1" in:fade={{ delay: 300, duration: 1000 }}>
-      <Index />
-    </main>
-  </div>
+  <BaseLayout>
+    <Router />
+  </BaseLayout>
 {/await}
