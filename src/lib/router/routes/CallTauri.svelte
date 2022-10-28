@@ -9,19 +9,20 @@
   }
 </script>
 
-<button
-  on:click={callTauri}
-  class=" font-extrabold btn btn-outline btn-primary btn-md">Call Tauri</button
->
-<div class="relative">
-  {#key message}
-    <p
-      class="absolute outline-secondary border-b-2 border-accent text-2xl
-     whitespace-nowrap
-      -translate-x-1/2 -translate-y-1/2"
-      in:fade={{ duration: 300 }}
-    >
-      {message}
-    </p>
-  {/key}
+<div class="h-full flex flex-col items-center justify-center">
+  <button
+    on:click={callTauri}
+    class="font-extrabold btn btn-outline btn-primary btn-md">Call Tauri</button
+  >
+  <div class="h-20 flex items-center">
+    {#key message}
+      <p
+        class="border-b-2 border-accent text-2xl
+    whitespace-nowrap"
+        in:fade={{ duration: 300 }}
+      >
+        {message}
+      </p>
+    {/key}
+  </div>
 </div>

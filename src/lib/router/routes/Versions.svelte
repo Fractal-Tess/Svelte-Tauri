@@ -20,13 +20,19 @@
   };
 </script>
 
-<h3>Versions</h3>
-<div>
-  {#await getVersions() then versions}
-    {#each Object.entries(versions) as [key, val], i (i)}
-      <div>
-        {key} - {val}
-      </div>
-    {/each}
-  {/await}
+<div
+  class="h-full flex flex-col space-y-8 items-center justify-center text-xl font-bold"
+>
+  <h1 class="text-2xl">Versions</h1>
+  <div>
+    <ul class="flex flex-col space-y-4">
+      {#await getVersions() then versions}
+        {#each Object.entries(versions) as [key, val], i (i)}
+          <li>
+            {key} - {val}
+          </li>
+        {/each}
+      {/await}
+    </ul>
+  </div>
 </div>

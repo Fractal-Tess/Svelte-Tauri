@@ -7,7 +7,7 @@
   import Versions from '$router/routes/Versions.svelte';
 </script>
 
-<!-- This gives a linting error: Fix -> https://github.com/AlexxNB/tinro/pull/121/commits/d2251ffed630aac6e76e71856204ead5dd2f6661 -->
+<!-- The routes give off an error: Here is a fix -> https://github.com/AlexxNB/tinro/pull/121/commits/d2251ffed630aac6e76e71856204ead5dd2f6661 -->
 <Route path="/"><Index /></Route>
 <Route path="/call-tauri"><CallTauri /></Route>
 <Route path="/hash-string"><HashString /></Route>
