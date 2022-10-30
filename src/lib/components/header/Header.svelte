@@ -28,18 +28,10 @@
     >
       <Fa icon={faGithub} size="lg" />
     </a>
-    <button
-      on:click={appWindow.minimize}
-      aria-live="polite"
-      class="text-xl hover:text-secondary"
-    >
+    <button on:click={appWindow.minimize} class="text-xl hover:text-secondary">
       <Fa icon={faWindowMinimize} />
     </button>
-    <button
-      on:click={appWindow.close}
-      aria-live="polite"
-      class="text-2xl hover:text-secondary"
-    >
+    <button on:click={appWindow.close} class="text-2xl hover:text-secondary">
       <Fa icon={faXmark} />
     </button>
   </div>
