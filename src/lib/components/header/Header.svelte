@@ -23,7 +23,7 @@
   <HeaderNav />
 
   <!-- TODO: Investigate why hovering over the icons is laggy -->
-  <div class="flex [&>*]:px-2 h-full">
+  <div class="flex [&>*]:px-2 h-full mr-2">
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
