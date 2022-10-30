@@ -18,7 +18,7 @@
 
   <HeaderNav />
 
-  <!-- TODO: Investigate why hovering over the icons is laggy -->
+  <!-- TODO: Make a report for the on hover text effect being laggy -->
   <div class="flex [&>*]:px-2 h-full mr-2">
     <a
       target="_blank"
