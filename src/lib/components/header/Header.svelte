@@ -12,14 +12,17 @@
   data-tauri-drag-region
   class="h-12 bg-base-100 shadow-lg items-center justify-between flex"
 >
-  <button on:click={theme.toggleTheme} class="hover:text-secondary ml-2">
+  <button
+    on:click={theme.toggleTheme}
+    class="hover:text-secondary ml-2 transition-all"
+  >
     <ThemeToggleIcon class="w-8" />
   </button>
 
   <HeaderNav />
 
   <!-- TODO: Make a report for the on hover text effect being laggy -->
-  <div class="flex [&>*]:px-2 h-full mr-2">
+  <div class="flex [&>*]:px-2 h-full mr-2 [&>*]:transition-all">
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
