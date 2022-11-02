@@ -10,7 +10,7 @@
 
 <div
   data-tauri-drag-region
-  class="h-12 bg-base-100 shadow-lg items-center justify-between flex"
+  class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
 >
   <button
     on:click={theme.toggleTheme}
@@ -22,7 +22,7 @@
   <HeaderNav />
 
   <!-- TODO: Make a report for the on hover text effect being laggy -->
-  <div class="flex [&>*]:px-2 h-full mr-2 [&>*]:transition-all">
+  <div class="flex [&>*]:px-2 h-full  [&>*]:transition-all">
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
