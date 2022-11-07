@@ -5,7 +5,8 @@
   import { faXmark, faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import Fa from 'svelte-fa';
-  import HeaderNav from '$lib/components/nav/HeaderNav.svelte';
+  import HeaderNav from '$lib/components/nav/HorizontalNav.svelte';
+  import { navLinks } from '$data/NavLinks';
 </script>
 
 <div
@@ -19,9 +20,8 @@
     <ThemeToggleIcon class="w-8" />
   </button>
 
-  <HeaderNav />
+  <HeaderNav {navLinks} />
 
-  <!-- TODO: Make a report for the on hover text effect being laggy -->
   <div class="flex [&>*]:px-2 h-full  [&>*]:transition-all">
     <a
       target="_blank"
