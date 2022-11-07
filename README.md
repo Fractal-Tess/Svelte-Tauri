@@ -3,6 +3,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/app.png" width="580" style="border-radius:2rem"/>
 </div>
+
 #### A simple Svelte-Tauri starter with a few opinionated additions:
 
 - Typescript
