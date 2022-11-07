@@ -8,10 +8,20 @@ export default defineConfig({
   resolve: {
     alias: {
       $lib: join(__dirname, 'src/lib'),
+
+      $components: join(__dirname, 'src/lib/components'),
+
       $assets: join(__dirname, 'src/assets'),
+
       $router: join(__dirname, 'src/lib/router'),
+
       $layout: join(__dirname, 'src/lib/layout'),
-      $styles: join(__dirname, 'src/styles/app.postcss')
+
+      $data: join(__dirname, 'src/lib/data'),
+
+      $styles: join(__dirname, 'src/styles/app.postcss'),
+
+      $types: join(__dirname, 'src/lib/types')
     }
   },
 
