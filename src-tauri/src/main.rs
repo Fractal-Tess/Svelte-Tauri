@@ -4,14 +4,22 @@
 )]
 
 use sha2::{Digest, Sha256};
+use tauri::RunEvent;
 
 fn main() {
-    tauri::Builder::default()
+    let app = tauri::Builder::default()
         .plugin(tauri_plugin_store::PluginBuilder::default().build())
         .plugin(tauri_plugin_window_state::Builder::default().build())
         .invoke_handler(tauri::generate_handler![called_from_js, hash256sum])
-        .run(tauri::generate_context!())
+        .build(tauri::generate_context!())
         .expect("error while running tauri application");
+
+    app.run(|_, e| match e {
+        RunEvent::Ready => {
+            println!("Window is ready");
+        }
+        _ => {}
+    })
 }
 
 #[tauri::command]
