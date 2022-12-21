@@ -5,7 +5,6 @@
   import { faXmark, faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import Fa from 'svelte-fa';
-  import HeaderNav from '$lib/components/nav/HorizontalNav.svelte';
   import { navLinks } from '$data/NavLinks';
 </script>
 
@@ -17,7 +16,24 @@
     <ThemeToggleIcon theme={$theme} />
   </button>
 
-  <HeaderNav {navLinks} />
+  <nav>
+    <ul class="flex space-x-4">
+      {#each navLinks as navLink, i (i)}
+        <li>
+          <a
+            href={navLink.target.href}
+            target={navLink.target.newTab ? '_blank' : ''}
+            class="hover:text-secondary transition-colors"
+          >
+            {#if navLink.content.icon}
+              <Fa icon={navLink.content.icon} />
+            {/if}
+            {navLink.content.text}
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </nav>
 
   <div class="flex [&>*]:px-2 h-full  [&>*]:transition-all">
     <a
