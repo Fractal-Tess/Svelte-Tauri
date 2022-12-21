@@ -8,7 +8,6 @@ use tauri::RunEvent;
 
 fn main() {
     let app = tauri::Builder::default()
-        .plugin(tauri_plugin_store::PluginBuilder::default().build())
         .plugin(tauri_plugin_window_state::Builder::default().build())
         .invoke_handler(tauri::generate_handler![called_from_js, hash256sum])
         .build(tauri::generate_context!())

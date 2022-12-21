@@ -2522,7 +2522,6 @@ dependencies = [
  "sha2",
  "tauri",
  "tauri-build",
- "tauri-plugin-store",
  "tauri-plugin-window-state",
 ]
 
@@ -2727,18 +2726,6 @@ dependencies = [
  "syn",
  "tauri-codegen",
  "tauri-utils",
-]
-
-[[package]]
-name = "tauri-plugin-store"
-version = "0.0.0"
-source = "git+https://github.com/tauri-apps/tauri-plugin-store?branch=dev#9bd993aa67766596638bbfd91e79a1bf8f632014"
-dependencies = [
- "log",
- "serde",
- "serde_json",
- "tauri",
- "thiserror",
 ]
 
 [[package]]
