@@ -15,7 +15,6 @@
       "$router/*": ["src/lib/router/*"],
       "$layout/*": ["src/lib/layout/*"],
       "$data/*": ["src/lib/data/*"],
-      "$styles": ["src/styles/app.postcss"],
       "$types": ["src/types.ts"]
     }
   },

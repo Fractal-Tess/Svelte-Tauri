@@ -13,7 +13,6 @@ export default defineConfig({
       $router: join(__dirname, 'src/lib/router'),
       $layout: join(__dirname, 'src/lib/layout'),
       $data: join(__dirname, 'src/lib/data'),
-      $styles: join(__dirname, 'src/styles/app.postcss'),
       $types: join(__dirname, 'src/lib/types')
     }
   },
