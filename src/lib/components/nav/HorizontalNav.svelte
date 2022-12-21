@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { active } from 'tinro';
   import type { NavLink } from '$types';
   import Fa from 'svelte-fa/src/fa.svelte';
 
@@ -11,9 +10,6 @@
     {#each navLinks as navLink, i (i)}
       <li>
         <a
-          use:active
-          exact
-          data-active-class="border-b-2"
           href={navLink.target.href}
           target={navLink.target.newTab ? '_blank' : ''}
         >
