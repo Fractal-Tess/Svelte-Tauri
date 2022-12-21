@@ -5,7 +5,7 @@ import type { Theme } from '$types';
 const store = new Store('.settings.dat');
 
 const createThemeStore = () => {
-  const { subscribe, update, set } = writable('');
+  const { subscribe, update, set } = writable<Theme>();
 
   return {
     subscribe,

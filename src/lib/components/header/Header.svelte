@@ -13,11 +13,8 @@
   data-tauri-drag-region
   class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
 >
-  <button
-    on:click={theme.toggleTheme}
-    class="hover:text-secondary ml-2 transition-all"
-  >
-    <ThemeToggleIcon class="w-8" />
+  <button on:click={theme.toggleTheme} class="hover:text-secondary ml-2 grid">
+    <ThemeToggleIcon theme={$theme} />
   </button>
 
   <HeaderNav {navLinks} />
