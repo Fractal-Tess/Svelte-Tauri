@@ -9,8 +9,6 @@
   }
 </script>
 
-{#await theme.load() then}
-  <BaseLayout>
-    <Router />
-  </BaseLayout>
-{/await}
+<BaseLayout>
+  <Router />
+</BaseLayout>
