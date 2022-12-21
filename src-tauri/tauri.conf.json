@@ -3,7 +3,7 @@
   "build": {
     "beforeBuildCommand": "pnpm svelte:build",
     "beforeDevCommand": "pnpm svelte:dev",
-    "devPath": "http://localhost:3000",
+    "devPath": "http://localhost:5173",
     "distDir": "../dist"
   },
   "package": {
