@@ -9,26 +9,13 @@
     "allowJs": true,
     "checkJs": true,
     "paths": {
-      "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
-
-      "$components": ["src/lib/components"],
       "$components/*": ["src/lib/components/*"],
-
-      "$assets": ["src/assets"],
       "$assets/*": ["src/assets/*"],
-
-      "$router": ["src/lib/router"],
       "$router/*": ["src/lib/router/*"],
-
-      "$layout": ["src/lib/layout"],
       "$layout/*": ["src/lib/layout/*"],
-
-      "$data": ["src/lib/data"],
       "$data/*": ["src/lib/data/*"],
-
       "$styles": ["src/styles/app.postcss"],
-
       "$types": ["src/types.ts"]
     }
   },
