@@ -20,6 +20,8 @@ sha2 = "0.10.6"
 tauri-plugin-window-state = { git = "https://github.com/tauri-apps/tauri-plugin-window-state", branch = "dev" }
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.2.2", features = ["api-all", "devtools"] }
+webkit2gtk = "0.18.2"
+webkit2gtk-sys = "0.18.0"
 
 [features]
 # by default Tauri runs in production mode

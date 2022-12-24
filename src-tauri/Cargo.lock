@@ -2523,6 +2523,8 @@ dependencies = [
  "tauri",
  "tauri-build",
  "tauri-plugin-window-state",
+ "webkit2gtk",
+ "webkit2gtk-sys",
 ]
 
 [[package]]
