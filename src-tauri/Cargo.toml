@@ -19,7 +19,7 @@ serde_json = "1.0"
 sha2 = "0.10.6"
 tauri-plugin-window-state = { git = "https://github.com/tauri-apps/tauri-plugin-window-state", branch = "dev" }
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.2.3", features = ["api-all", "devtools"] }
+tauri = { version = "1.2.4", features = ["api-all", "devtools"] }
 
 [features]
 # by default Tauri runs in production mode
