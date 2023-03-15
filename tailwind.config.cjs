@@ -18,14 +18,20 @@ const config = {
     themes: [
       {
         light: {
-          ...require('daisyui/src/colors/themes')['[data-theme=lofi]'],
-          primary: '#45B1E8',
-          secondary: '#fbbf24'
+          ...require('daisyui/src/colors/themes')['[data-theme=light]'],
+          primary: '#0096FF',
+          secondary: '#FF1E56',
+          neutral: '#A9FFF7',
+          accent: '#E3E7AF',
+          'base-100': '#11151C'
         },
         dark: {
           ...require('daisyui/src/colors/themes')['[data-theme=black]'],
-          primary: '#45B1E8',
-          secondary: '#fbbf24'
+          primary: '#0096FF',
+          secondary: '#FF1E56',
+          neutral: '#A9FFF7',
+          accent: '#E3E7AF',
+          'base-100': '#11151C'
         }
       }
     ]
