@@ -1,13 +1,13 @@
 [package]
 name = "svelte-tauri"
-version = "0.0.1"
+version = "0.1.0"
 description = "Svelte-Tauri template starter"
 authors = ["Fractal-Tess"]
 license = "MIT"
 repository = "https://github.com/Fractal-Tess/Svelte-Tauri"
 default-run = "svelte-tauri"
 edition = "2021"
-rust-version = "1.65"
+rust-version = "1.68"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -17,17 +17,16 @@ tauri-build = { version = "1.2.1", features = [] }
 [dependencies]
 serde_json = "1.0"
 sha2 = "0.10.6"
-tauri-plugin-window-state = { git = "https://github.com/tauri-apps/tauri-plugin-window-state", branch = "dev" }
+tauri-plugin-window-state = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "dev" }
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.2.3", features = ["api-all", "devtools"] }
-
 [features]
 # by default Tauri runs in production mode
 # when `tauri dev` runs it is executed with `cargo run --no-default-features` if `devPath` is an URL
-default = [ "custom-protocol" ]
+default = ["custom-protocol"]
 # this feature is used used for production builds where `devPath` points to the filesystem
 # DO NOT remove this
-custom-protocol = [ "tauri/custom-protocol" ]
+custom-protocol = ["tauri/custom-protocol"]
 
 
 [profile.release]
