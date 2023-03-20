@@ -1,11 +1,13 @@
+## A simple Svelte-Tauri starter with a few opinionated additions:
 ## Svelte/Tauri Template <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/st-1024.png" width="30" align="center" />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/main/src/assets/app.jpg" width="580" style="border-radius:2rem"/>
 </div>
 
-#### A simple Svelte-Tauri starter with a few opinionated additions:
 
+
+## Overview 
 - Typescript
 - UI:
   - Tailwind
@@ -23,3 +25,7 @@
   - Husky
   - TODO: Testing
 
+
+
+## Requirements
+You need to have installed [mold](https://github.com/rui314/mold)

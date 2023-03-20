@@ -8,7 +8,7 @@
   import { navLinks } from '$data/NavLinks';
 </script>
 
-<div
+<header
   data-tauri-drag-region
   class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
 >
@@ -51,4 +51,4 @@
       <Fa icon={faXmark} />
     </button>
   </div>
-</div>
+</header>
