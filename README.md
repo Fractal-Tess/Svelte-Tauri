@@ -28,4 +28,4 @@
 
 
 ## Requirements
-You need to have installed [mold](https://github.com/rui314/mold)
+You need to have installed [mold](https://github.com/rui314/mold) linker installed.
