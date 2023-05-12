@@ -1,5 +1,5 @@
-const daisyui = require('daisyui');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const heropatterns = require('tailwindcss-hero-patterns/src/patterns');
 
 /** @type {import('tailwindcss').Config} */
 const config = {
@@ -11,6 +11,10 @@ const config = {
       fontFamily: {
         sans: ['roboto', ...defaultTheme.fontFamily.sans]
       }
+    },
+    heroPatternsOpacities: ['10'],
+    heroPatterns: {
+      topography: heropatterns.topography
     }
   },
 
@@ -30,7 +34,7 @@ const config = {
       }
     ]
   },
-  plugins: [daisyui]
+  plugins: [require('daisyui'), require('tailwindcss-hero-patterns')]
 };
 
 module.exports = config;
