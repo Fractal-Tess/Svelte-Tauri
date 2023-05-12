@@ -5,43 +5,52 @@
   import { faXmark, faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
   import { faGithub } from '@fortawesome/free-brands-svg-icons';
   import Fa from 'svelte-fa';
-  import { navLinks } from '$data/NavLinks';
+  import { link } from 'svelte-spa-router';
 </script>
 
 <header
   data-tauri-drag-region
-  class="h-12 bg-base-100 shadow-lg items-center justify-between flex px-2"
->
-  <button on:click={theme.toggleTheme} class="hover:text-secondary ml-2 grid">
+  class="flex h-12 items-center justify-between bg-base-100 px-2 shadow-lg">
+  <button
+    tabindex="-1"
+    on:click={theme.toggleTheme}
+    class="flex items-center hover:text-secondary">
     <ThemeToggleIcon theme={$theme} />
   </button>
 
   <nav>
-    <ul class="flex space-x-4">
-      {#each navLinks as navLink, i (i)}
-        <li>
-          <a
-            href={navLink.target.href}
-            target={navLink.target.newTab ? '_blank' : ''}
-            class="hover:text-secondary transition-colors"
-          >
-            {#if navLink.content.icon}
-              <Fa icon={navLink.content.icon} />
-            {/if}
-            {navLink.content.text}
-          </a>
-        </li>
-      {/each}
+    <ul class="flex space-x-4 text-xl font-bold">
+      <li>
+        <a use:link href="/" class="transition-colors hover:text-secondary">
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          use:link
+          href="/#call_tauri"
+          class="transition-colors hover:text-secondary">
+          Call Tauri
+        </a>
+      </li>
+
+      <li>
+        <a
+          use:link
+          href="/#versions"
+          class="transition-colors hover:text-secondary">
+          Versions
+        </a>
+      </li>
     </ul>
   </nav>
 
-  <div class="flex [&>*]:px-2 h-full  [&>*]:transition-all">
+  <div class="flex h-full [&>*]:px-2 [&>*]:transition-all">
     <a
       target="_blank"
       href="https://github.com/Fractal-Tess/Svelte-Tauri"
-      class="hover:text-secondary flex items-center"
-      rel="noreferrer"
-    >
+      class="flex items-center hover:text-secondary"
+      rel="noreferrer">
       <Fa icon={faGithub} size="lg" />
     </a>
     <button on:click={appWindow.minimize} class="text-xl hover:text-secondary">

@@ -8,9 +8,9 @@
 
   const getVersions = async (): Promise<Versions> => {
     const [tauri, app, name] = await Promise.all([
+      getName(),
       getTauriVersion(),
-      getVersion(),
-      getName()
+      getVersion()
     ]);
     return {
       tauri,
@@ -21,15 +21,15 @@
 </script>
 
 <div
-  class="h-full flex flex-col space-y-8 items-center justify-center text-xl font-bold"
->
-  <h1 class="text-2xl">Versions</h1>
+  class="form-control flex-1 items-center justify-center space-y-8 text-2xl font-bold">
+  <h1 class="text-5xl text-primary">Versions</h1>
   <div>
-    <ul class="flex flex-col space-y-4">
+    <ul class="form-control space-y-4">
       {#await getVersions() then versions}
-        {#each Object.entries(versions) as [key, val], i (i)}
+        {#each Object.entries(versions) as [key, val]}
           <li>
-            {key} - {val}
+            <span class="text-secondary"> {key}</span> -
+            <span class="text-primary"> {val}</span>
           </li>
         {/each}
       {/await}

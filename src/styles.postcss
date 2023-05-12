@@ -8,16 +8,24 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-body,
-html {
-  /* Fix tailwindcss/daisyUI applying color to the body tag */
-  background-color: transparent !important;
-  @apply rounded-3xl overflow-hidden;
-}
-
 @layer utilities {
   /* Class is used for development purposes only */
   .dev {
-    border: 1px solid red;
+    @apply border-[1px];
   }
+  .devo {
+    @apply outline outline-dashed outline-1 outline-primary;
+  }
+}
+
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }

@@ -1,16 +1,12 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
 
-  import Header from '$lib/components/header/Header.svelte';
-  import Footer from '$lib/components/footer/Footer.svelte';
+  import Header from '$layout/BaseHeader.svelte';
 </script>
 
-<div
-  class="font-sans bg-base-100 text-base-content h-screen flex flex-col overflow-y-auto overflow-x-hidden"
->
+<div class="form-control min-h-screen bg-fixed heropattern-topography-white/10">
   <Header />
-  <main class="flex-1" in:fade={{ delay: 300, duration: 1000 }}>
+  <main class="form-control flex-1" in:fade={{ delay: 300, duration: 1000 }}>
     <slot />
   </main>
-  <Footer />
 </div>

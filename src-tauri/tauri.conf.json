@@ -4,7 +4,7 @@
     "beforeBuildCommand": "pnpm svelte:build",
     "beforeDevCommand": "pnpm svelte:dev",
     "devPath": "http://localhost:5173",
-    "distDir": "../dist"
+    "distDir": "../build"
   },
   "package": {
     "productName": "svelte-tauri",

@@ -1,20 +1,17 @@
 <script lang="ts">
-  import svelte_logo from '$assets/svelte_logo.svg';
-  import tauri_logo from '$assets/tauri_logo.svg';
 </script>
 
 <div
-  class="flex flex-col space-y-6 items-center justify-center font-bold drop-shadow-ft h-full"
->
+  class="form-control flex-1 items-center justify-center space-y-6 text-center font-bold">
   <h1 class="text-6xl">Welcome</h1>
-  <h2 class="text-3xl flex items-center">
+  <h2 class="flex items-center text-3xl [&_img]:h-12">
     This is a &#160
     <span>
-      <img src={svelte_logo} alt="svelte logo" class="h-12" />
+      <img src={'/svelte_logo.svg'} alt="svelte logo" />
     </span>
     &#160-&#160
     <span>
-      <img src={tauri_logo} alt="svelte logo" class="h-12" />
+      <img src={'/tauri_logo.svg'} alt="svelte logo" />
     </span>
     &#160 Template
   </h2>
