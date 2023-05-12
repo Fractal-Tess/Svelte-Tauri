@@ -17,9 +17,9 @@ export default defineConfig({
     }
   },
 
-  publicDir: false,
-
   clearScreen: false,
+
+  publicDir: 'static',
 
   server: {
     strictPort: true,
