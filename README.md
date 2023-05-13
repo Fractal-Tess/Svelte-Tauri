@@ -1,5 +1,4 @@
-## A simple Svelte-Tauri starter with a few opinionated additions:
-## Svelte/Tauri Template <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/dev/static/st-1024.png" width="30" align="center" />
+# Svelte/Tauri Template <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/dev/static/st-1024.png" width="30" align="center" />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Fractal-Tess/Svelte-Tauri/dev/static/app.jpeg" width="580" style="border-radius:2rem"/>
