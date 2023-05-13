@@ -51,7 +51,15 @@
       "csp": null
     },
     "updater": {
-      "active": false
+      "active": true,
+      "windows": {
+        "installMode": "passive"
+      },
+      "endpoints": [
+        "https://github.com/Fractal-Tess/Svelte-Tauri/releases/latest/download/latest.json"
+      ],
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IENFOThEODY5RUUwOEZERgpSV1RmaitDZWhvM3BETFZ2R0dKYmE1ems2MXlJMnhvMmhkazJ0NGlwbUg0SWlCVmp1ZW1WcVNuKwo="
     },
     "windows": [
       {
