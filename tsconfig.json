@@ -2,13 +2,18 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "strict": true,
+    "esModuleInterop": true,
     "noUncheckedIndexedAccess": true,
     "target": "ESNext",
-    "module": "ESNext",
     "baseUrl": ".",
-    // Disable for faster intellisense/transpile
     "allowJs": true,
     "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
     "paths": {
       "$lib/*": ["src/lib/*"],
       "$components/*": ["src/lib/components/*"],
