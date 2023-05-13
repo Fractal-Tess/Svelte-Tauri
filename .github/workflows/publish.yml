@@ -51,6 +51,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - uses: rui314/setup-mold@v1
+        with:
+          make-default: false
 
       - name: Install Rust stable
         uses: dtolnay/rust-toolchain@stable
