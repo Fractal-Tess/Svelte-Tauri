@@ -8,9 +8,9 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'monthly'
 
   - package-ecosystem: 'cargo'
     directory: '/src-tauri/'
     schedule:
-      interval: 'daily'
+      interval: 'monthly'
