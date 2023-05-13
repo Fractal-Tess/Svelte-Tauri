@@ -26,5 +26,6 @@
 
 
 
-## Requirements
-You need to have installed [mold](https://github.com/rui314/mold) linker installed.
+## Requirements 
+
+* (optional) - On linux you need to have installed the [mold](https://github.com/rui314/mold) linker. If you prefer not to do that, go ahead and remove the rust flags in the `/src-tauri/.cargo/config.toml` file.
