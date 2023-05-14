@@ -7,7 +7,7 @@
   };
 
   const getVersions = async (): Promise<Versions> => {
-    const [tauri, app, name] = await Promise.all([
+    const [name, tauri, app] = await Promise.all([
       getName(),
       getTauriVersion(),
       getVersion()

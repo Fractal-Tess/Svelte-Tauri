@@ -15,4 +15,5 @@
     </span>
     &#160 Template
   </h2>
+  <p class="text-4xl font-bold">UPDATE</p>
 </div>
