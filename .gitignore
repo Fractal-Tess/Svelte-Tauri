@@ -1,5 +1,5 @@
 # Build folders
-dist
+build
 
 # Rust output 
 target
