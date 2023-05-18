@@ -4,6 +4,7 @@ use std::{collections::HashMap, sync::Mutex};
 
 use tauri::{Builder, Wry};
 
+#[derive(Default)]
 pub struct Store {
     store: Mutex<HashMap<String, String>>,
 }
@@ -15,18 +16,17 @@ impl Store {
             .insert(key, val);
     }
     pub fn read_key(&self, key: &String) -> Option<String> {
-        match self.store.lock().expect("cannot lock store").get(key) {
-            Some(s) => Some(s.to_string()),
-            None => None,
-        }
+        self.store
+            .lock()
+            .expect("cannot lock store")
+            .get(key)
+            .map(|val| val.to_string())
     }
 }
 
 // Exports a function for the tauri app instance to use and register all commands defined as frontend IPC command handlers.
 pub fn register_managed_state(builder: Builder<Wry>) -> Builder<Wry> {
-    let store = Store {
-        store: Mutex::from(HashMap::new()),
-    };
+    let store = Store::default();
 
     builder.manage(store)
 }

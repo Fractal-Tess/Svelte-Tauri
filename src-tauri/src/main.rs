@@ -25,10 +25,9 @@ fn main() {
     // Run the app
     app.build(tauri::generate_context!())
         .expect("error while running tauri application")
-        .run(|_, e| match e {
-            RunEvent::Ready => {
+        .run(|_, e| {
+            if let RunEvent::Ready = e {
                 println!("Window is ready");
             }
-            _ => {}
         })
 }

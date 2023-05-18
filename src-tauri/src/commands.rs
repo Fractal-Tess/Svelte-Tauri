@@ -45,7 +45,7 @@ fn hash256sum(hash_input: String) -> String {
 // Example command using managed state
 #[tauri::command]
 #[specta::specta]
-fn store_set_key(key: String, value: String, store: State<Store>) -> () {
+fn store_set_key(key: String, value: String, store: State<Store>) {
     store.add_key_val(key, value);
 }
 
