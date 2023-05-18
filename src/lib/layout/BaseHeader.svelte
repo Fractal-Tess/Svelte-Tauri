@@ -26,11 +26,8 @@
         </a>
       </li>
       <li>
-        <a
-          use:link
-          href="/#call_tauri"
-          class="transition-colors hover:text-secondary">
-          Call Tauri
+        <a use:link href="/#IPC" class="transition-colors hover:text-secondary">
+          IPC
         </a>
       </li>
 
