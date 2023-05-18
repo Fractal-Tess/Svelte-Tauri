@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       $lib: join(__dirname, 'src/lib'),
+      $ipc: join(__dirname, 'src/lib/ipc.ts'),
       $components: join(__dirname, 'src/lib/components'),
       $assets: join(__dirname, 'src/assets'),
       $router: join(__dirname, 'src/lib/router'),

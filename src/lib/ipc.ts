@@ -18,3 +18,11 @@ export function helloTauri() {
 export function hash256sum(hashInput: string) {
   return invoke<string>('hash256sum', { hashInput });
 }
+
+export function storeSetKey(key: string, value: string) {
+  return invoke<null>('store_set_key', { key, value });
+}
+
+export function storeReadKey(key: string) {
+  return invoke<string | null>('store_read_key', { key });
+}
