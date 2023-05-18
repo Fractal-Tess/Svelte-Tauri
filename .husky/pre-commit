@@ -4,3 +4,7 @@
 # If not using pnpm, switch to your package manager
 npx lint-staged
 
+cd src-tauri
+cargo clippy --all --tests -- -D warnings
+cargo test --all
+
