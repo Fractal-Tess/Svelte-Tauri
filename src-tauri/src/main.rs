@@ -3,13 +3,19 @@
     windows_subsystem = "windows"
 )]
 
-use sha2::{Digest, Sha256};
+use commands::register_commands;
+use prelude::*;
+
 use tauri::RunEvent;
+mod commands;
+mod error;
+mod prelude;
 
 fn main() {
-    let app = tauri::Builder::default()
-        .plugin(tauri_plugin_window_state::Builder::default().build())
-        .invoke_handler(tauri::generate_handler![called_from_js, hash256sum])
+    let app =
+        tauri::Builder::default().plugin(tauri_plugin_window_state::Builder::default().build());
+
+    let app = register_commands(app)
         .build(tauri::generate_context!())
         .expect("error while running tauri application");
 
@@ -19,19 +25,4 @@ fn main() {
         }
         _ => {}
     })
-}
-
-#[tauri::command]
-fn called_from_js() -> String {
-    // The print macro is problematic in release environment (crashes the application if not ran from a terminal)
-    // println!("Returning from tauri");
-    "Hi from Tauri".to_owned()
-}
-
-#[tauri::command]
-fn hash256sum(hash_input: String) -> String {
-    let mut hasher = Sha256::new();
-    hasher.update(hash_input.as_bytes());
-    let result = hasher.finalize();
-    format!("{:X}", result)
 }
