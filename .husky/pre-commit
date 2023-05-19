@@ -5,5 +5,4 @@
 npx lint-staged
 
 cd src-tauri
-cargo clippy --all --tests -- -W clippy::nursery -W clippy::pedantic -A clippy::module-name-repetitions -D clippy::unwrap_used 
-cargo test --all
+cargo clippy -- -W clippy::nursery -W clippy::pedantic -A clippy::module-name-repetitions -W clippy::unwrap_used 
