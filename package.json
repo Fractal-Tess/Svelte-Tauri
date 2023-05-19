@@ -1,6 +1,6 @@
 {
   "name": "svelte-tauri",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "license": "MIT",
   "repository": {
@@ -21,7 +21,8 @@
     "lint": "eslint .",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "svelte:build": "vite build",
-    "svelte:dev": "vite dev"
+    "svelte:dev": "vite dev",
+    "changeset": "changeset"
   },
   "lint-staged": {
     "src/**/*.{js,ts,svelte}": "eslint --cache --fix",
