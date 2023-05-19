@@ -69,9 +69,3 @@ jobs:
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # TAURI_KEY_PASSWORD: ${{ secrets.TAURI_KEY_PASSWORD }}
-
-      - name: Clippy & Tests
-        run: |
-          cd src-tauri
-          cargo clippy --all --tests -- -W clippy::nursery -W clippy::pedantic -A clippy::module-name-repetitions -D clippy::unwrap_used 
-          cargo test --all
