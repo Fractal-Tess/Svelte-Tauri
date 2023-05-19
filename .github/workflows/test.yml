@@ -58,7 +58,7 @@ jobs:
       - name: Clippy & Tests
         run: |
           cd src-tauri
-          cargo clippy --all --tests -- -D warnings
+          cargo clippy --all --tests -- -W clippy::nursery -W clippy::pedantic -A clippy::module-name-repetitions -D clippy::unwrap_used 
           cargo test --all
 
       - name: install dependencies (ubuntu only)
