@@ -1,5 +1,5 @@
+#![allow(clippy::needless_pass_by_value)]
 // This module shows examples of how to use IPC command handlers that can be invoked from the frontend.
-
 use sha2::{Digest, Sha256};
 use specta::collect_types;
 use tauri::{Builder, State, Wry};
@@ -8,7 +8,7 @@ use tauri_specta::ts;
 use crate::state::Store;
 
 // Exports a function for the tauri app instance to use and register all commands defined as frontend IPC command handlers.
-pub fn register_commands(builder: Builder<Wry>) -> Builder<Wry> {
+pub fn register_command_handlers(builder: Builder<Wry>) -> Builder<Wry> {
     // Specta generating typed binding interfaces
     #[cfg(debug_assertions)]
     ts::export(
@@ -39,7 +39,7 @@ fn hash256sum(hash_input: String) -> String {
     let mut hasher = Sha256::new();
     hasher.update(hash_input.as_bytes());
     let result = hasher.finalize();
-    format!("{:X}", result)
+    format!("{result:X}")
 }
 
 // Example command using managed state
