@@ -3,35 +3,31 @@
     windows_subsystem = "windows"
 )]
 
-use sha2::{Digest, Sha256};
-use tauri::RunEvent;
+use commands::register_command_handlers;
+use state::register_managed_state;
+use tauri::{Builder as TauriBuilder, RunEvent};
+
+mod commands;
+mod error;
+mod prelude;
+mod state;
 
 fn main() {
-    let app = tauri::Builder::default()
-        .plugin(tauri_plugin_window_state::Builder::default().build())
-        .invoke_handler(tauri::generate_handler![called_from_js, hash256sum])
-        .build(tauri::generate_context!())
-        .expect("error while running tauri application");
+    // App builder
+    let app = TauriBuilder::default().plugin(tauri_plugin_window_state::Builder::default().build());
 
-    app.run(|_, e| match e {
-        RunEvent::Ready => {
-            println!("Window is ready");
-        }
-        _ => {}
-    })
-}
+    // Register app commands
+    let app = register_command_handlers(app);
 
-#[tauri::command]
-fn called_from_js() -> String {
-    // The print macro is problematic in release environment (crashes the application if not ran from a terminal)
-    // println!("Returning from tauri");
-    "Hi from Tauri".to_owned()
-}
+    // Register app managed state
+    let app = register_managed_state(app);
 
-#[tauri::command]
-fn hash256sum(hash_input: String) -> String {
-    let mut hasher = Sha256::new();
-    hasher.update(hash_input.as_bytes());
-    let result = hasher.finalize();
-    format!("{:X}", result)
+    // Run the app
+    app.build(tauri::generate_context!())
+        .expect("error while running tauri application")
+        .run(|_, e| {
+            if matches!(e, RunEvent::Ready) {
+                println!("Window is ready");
+            }
+        });
 }

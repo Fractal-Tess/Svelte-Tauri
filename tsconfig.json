@@ -16,6 +16,7 @@
     "isolatedModules": true,
     "paths": {
       "$lib/*": ["src/lib/*"],
+      "$ipc": ["src/lib/ipc.ts"],
       "$components/*": ["src/lib/components/*"],
       "$assets/*": ["src/assets/*"],
       "$router/*": ["src/lib/router/*"],

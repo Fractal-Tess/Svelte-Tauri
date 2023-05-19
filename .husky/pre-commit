@@ -1,5 +1,8 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
 # If not using pnpm, switch to your package manager
-pnpm exec lint-staged
+npx lint-staged
+
+cd src-tauri
+cargo clippy -- -W clippy::nursery -W clippy::pedantic -A clippy::module-name-repetitions -W clippy::unwrap_used 
