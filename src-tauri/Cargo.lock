@@ -3373,9 +3373,9 @@ dependencies = [
 
 [[package]]
 name = "tauri-specta"
-version = "1.0.0"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23419889204476d5a70a04077d4628061a5bb667b18804a4572df2fe6ccb8ba5"
+checksum = "aa034c38b7bdfeccc606eca0b030a1e67a20b78e7642edef09816b7e1ff9a9de"
 dependencies = [
  "heck 0.4.1",
  "indoc 2.0.1",
