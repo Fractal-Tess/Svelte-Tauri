@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
-    "@fontsource/roboto": "^4.5.8",
+    "@fontsource/roboto": "^5.0.5",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
