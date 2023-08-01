@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^4.0.1
     version: 4.0.1
   '@types/node':
-    specifier: 18.15.3
-    version: 18.15.3
+    specifier: 20.4.5
+    version: 20.4.5
   '@typescript-eslint/eslint-plugin':
     specifier: ^5.59.6
     version: 5.59.6(@typescript-eslint/parser@5.59.6)(eslint@8.40.0)(typescript@5.0.4)
@@ -111,7 +111,7 @@ devDependencies:
     version: 5.0.4
   vite:
     specifier: ^4.3.7
-    version: 4.3.7(@types/node@18.15.3)
+    version: 4.3.7(@types/node@20.4.5)
 
 packages:
 
@@ -720,7 +720,7 @@ packages:
       magic-string: 0.30.0
       svelte: 3.59.1
       svelte-hmr: 0.15.1(svelte@3.59.1)
-      vite: 4.3.7(@types/node@18.15.3)
+      vite: 4.3.7(@types/node@20.4.5)
       vitefu: 0.2.4(vite@4.3.7)
     transitivePeerDependencies:
       - supports-color
@@ -850,8 +850,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
 
-  /@types/node@18.15.3:
-    resolution: {integrity: sha512-p6ua9zBxz5otCmbpb5D3U4B5Nanw6Pk3PPyX05xnxbB/fRv71N7CPmORg7uAD5P70T0xmx1pzAx/FUfa5X+3cw==}
+  /@types/node@20.4.5:
+    resolution: {integrity: sha512-rt40Nk13II9JwQBdeYqmbn2Q6IVTA5uPhvSO+JVqdXw/6/4glI6oR9ezty/A9Hg5u7JH4OmYmuQ+XvjKm0Datg==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:
@@ -4106,7 +4106,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite@4.3.7(@types/node@18.15.3):
+  /vite@4.3.7(@types/node@20.4.5):
     resolution: {integrity: sha512-MTIFpbIm9v7Hh5b0wSBgkcWzSBz7SAa6K/cBTwS4kUiQJfQLFlZZRJRQgqunCVzhTPCk674tW+0Qaqh3Q00dBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4131,7 +4131,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.15.3
+      '@types/node': 20.4.5
       esbuild: 0.17.13
       postcss: 8.4.23
       rollup: 3.21.6
@@ -4147,7 +4147,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.3.7(@types/node@18.15.3)
+      vite: 4.3.7(@types/node@20.4.5)
     dev: true
 
   /vscode-json-languageservice@4.2.1:
