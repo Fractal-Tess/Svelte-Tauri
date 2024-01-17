@@ -18,6 +18,13 @@ module.exports = {
         args: 'after-used',
         argsIgnorePattern: '^_'
       }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^\$\$(Props|Events|Slots|Generic)$"
+      }
     ]
   },
   plugins: ['svelte3', '@typescript-eslint', 'unused-imports'],
