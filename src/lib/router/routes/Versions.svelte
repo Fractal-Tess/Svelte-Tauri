@@ -1,38 +1,34 @@
 <script lang="ts">
-  import { getTauriVersion, getVersion, getName } from '@tauri-apps/api/app';
+  import { getTauriVersion, getVersion, getName } from '@tauri-apps/api/app'
   type Versions = {
-    tauri: string;
-    app: string;
-    name: string;
-  };
+    tauri: string
+    app: string
+    name: string
+  }
 
   const getVersions = async (): Promise<Versions> => {
     const [name, tauri, app] = await Promise.all([
       getName(),
       getTauriVersion(),
       getVersion()
-    ]);
+    ])
     return {
       tauri,
       app,
       name
-    };
-  };
+    }
+  }
 </script>
 
-<div
-  class="form-control flex-1 items-center justify-center space-y-8 text-2xl font-bold">
-  <h1 class="text-5xl text-primary">Versions</h1>
-  <div>
-    <ul class="form-control space-y-4">
-      {#await getVersions() then versions}
-        {#each Object.entries(versions) as [key, val]}
-          <li>
-            <span class="text-secondary"> {key}</span> -
-            <span class="text-primary"> {val}</span>
-          </li>
-        {/each}
-      {/await}
-    </ul>
-  </div>
-</div>
+<section class="h-full flex flex-col items-center justify-center gap-10">
+  <h1 class="text-5xl font-extrabold italic">Versions</h1>
+  <ul class="flex flex-col gap-2">
+    {#await getVersions() then versions}
+      {#each Object.entries(versions) as [key, val]}
+        <li class="text-xl font-bold">
+          {key} - {val}
+        </li>
+      {/each}
+    {/await}
+  </ul>
+</section>
