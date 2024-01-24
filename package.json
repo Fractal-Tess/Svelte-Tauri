@@ -22,7 +22,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "svelte:build": "vite build",
     "svelte:dev": "vite dev",
-    "changeset": "changeset"
+    "changeset:version": "changeset version"
   },
   "lint-staged": {
     "*.{ts,svelte}": [
