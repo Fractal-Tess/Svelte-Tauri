@@ -18,11 +18,7 @@
       "$lib/*": ["src/lib/*"],
       "$ipc": ["src/lib/ipc.ts"],
       "$components/*": ["src/lib/components/*"],
-      "$assets/*": ["src/assets/*"],
-      "$router/*": ["src/lib/router/*"],
-      "$layout/*": ["src/lib/layout/*"],
-      "$data/*": ["src/lib/data/*"],
-      "$types": ["src/types.ts"]
+      "$router/*": ["src/lib/router/*"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],

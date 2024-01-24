@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
-import { join } from 'node:path';
+import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { join } from 'node:path'
 
 export default defineConfig({
   plugins: [svelte()],
@@ -10,11 +10,7 @@ export default defineConfig({
       $lib: join(__dirname, 'src/lib'),
       $ipc: join(__dirname, 'src/lib/ipc.ts'),
       $components: join(__dirname, 'src/lib/components'),
-      $assets: join(__dirname, 'src/assets'),
-      $router: join(__dirname, 'src/lib/router'),
-      $layout: join(__dirname, 'src/lib/layout'),
-      $data: join(__dirname, 'src/lib/data'),
-      $types: join(__dirname, 'src/lib/types')
+      $router: join(__dirname, 'src/lib/router')
     }
   },
 
@@ -35,4 +31,4 @@ export default defineConfig({
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
     sourcemap: !!process.env.TAURI_DEBUG
   }
-});
+})
