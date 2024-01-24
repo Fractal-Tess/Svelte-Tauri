@@ -28,6 +28,8 @@ jobs:
 
       - name: Install
         run: pnpm install --frozen-lockfile
+      - name: Install
+        run: pnpm svelte:build
 
       - name: Install dependencies
         run: |
