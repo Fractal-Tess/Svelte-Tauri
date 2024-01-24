@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { getFormField } from 'formsnap';
-  import type { HTMLTextareaAttributes } from 'svelte/elements';
-  import type { TextareaGetFormField } from '.';
-  import { Textarea, type TextareaEvents } from '$lib/components/ui/textarea';
+  import { getFormField } from 'formsnap'
+  import type { HTMLTextareaAttributes } from 'svelte/elements'
+  import type { TextareaGetFormField } from '.'
+  import { Textarea, type TextareaEvents } from '$lib/components/ui/textarea'
 
-  type $$Props = HTMLTextareaAttributes;
-  type $$Events = TextareaEvents;
+  type $$Props = HTMLTextareaAttributes
+  type $$Events = TextareaEvents
 
-  const { attrStore, value } = getFormField() as TextareaGetFormField;
+  const { attrStore, value } = getFormField() as TextareaGetFormField
 </script>
 
 <Textarea
@@ -25,4 +25,5 @@
   on:mouseenter
   on:mouseleave
   on:paste
-  on:input />
+  on:input
+/>

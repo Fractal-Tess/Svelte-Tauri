@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Calendar as CalendarPrimitive } from 'bits-ui';
-  import { ChevronRight } from 'lucide-svelte';
-  import { buttonVariants } from '$lib/components/ui/button';
-  import { cn } from '$lib/utils';
+  import { Calendar as CalendarPrimitive } from 'bits-ui'
+  import { ChevronRight } from 'lucide-svelte'
+  import { buttonVariants } from '$lib/components/ui/button'
+  import { cn } from '$lib/utils'
 
-  type $$Props = CalendarPrimitive.NextButtonProps;
-  type $$Events = CalendarPrimitive.NextButtonEvents;
+  type $$Props = CalendarPrimitive.NextButtonProps
+  type $$Events = CalendarPrimitive.NextButtonEvents
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export { className as class }
 </script>
 
 <CalendarPrimitive.NextButton
@@ -19,7 +19,8 @@
     className
   )}
   {...$$restProps}
-  let:builder>
+  let:builder
+>
   <slot {builder}>
     <ChevronRight class="h-4 w-4" />
   </slot>

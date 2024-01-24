@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { cn } from '$lib/utils';
-  import type { HTMLAttributes } from 'svelte/elements';
+  import { cn } from '$lib/utils'
+  import type { HTMLAttributes } from 'svelte/elements'
 
   type $$Props = HTMLAttributes<HTMLTableRowElement> & {
-    'data-state'?: unknown;
-  };
+    'data-state'?: unknown
+  }
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export { className as class }
 </script>
 
 <tr
@@ -17,6 +17,7 @@
   )}
   {...$$restProps}
   on:click
-  on:keydown>
+  on:keydown
+>
   <slot />
 </tr>

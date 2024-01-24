@@ -3,21 +3,20 @@
     Button,
     type Props,
     buttonVariants
-  } from '$lib/components/ui/button/index.js';
-  import { cn } from '$lib/utils';
-  import { ArrowRight } from 'lucide-svelte';
-  import type { VariantProps } from 'tailwind-variants';
-  import { getEmblaContext } from './context.js';
+  } from '$lib/components/ui/button/index.js'
+  import { cn } from '$lib/utils'
+  import { ArrowRight } from 'lucide-svelte'
+  import type { VariantProps } from 'tailwind-variants'
+  import { getEmblaContext } from './context.js'
 
-  type $$Props = Props;
+  type $$Props = Props
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
-  export let variant: VariantProps<typeof buttonVariants>['variant'] =
-    'outline';
-  export let size: VariantProps<typeof buttonVariants>['size'] = 'icon';
+  let className: $$Props['class'] = undefined
+  export { className as class }
+  export let variant: VariantProps<typeof buttonVariants>['variant'] = 'outline'
+  export let size: VariantProps<typeof buttonVariants>['size'] = 'icon'
   const { orientation, canScrollNext, scrollNext, handleKeyDown } =
-    getEmblaContext('<Carousel.Next/>');
+    getEmblaContext('<Carousel.Next/>')
 </script>
 
 <Button
@@ -33,7 +32,8 @@
   disabled={!$canScrollNext}
   on:click={scrollNext}
   on:keydown={handleKeyDown}
-  {...$$restProps}>
+  {...$$restProps}
+>
   <ArrowRight class="h-4 w-4" />
   <span class="sr-only">Next slide</span>
 </Button>

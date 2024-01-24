@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { cn } from '$lib/utils';
-  import type { HTMLAttributes } from 'svelte/elements';
-  import { getEmblaContext } from './context.js';
+  import { cn } from '$lib/utils'
+  import type { HTMLAttributes } from 'svelte/elements'
+  import { getEmblaContext } from './context.js'
 
-  type $$Props = HTMLAttributes<HTMLDivElement>;
-  let className: string | undefined | null = undefined;
-  export { className as class };
+  type $$Props = HTMLAttributes<HTMLDivElement>
+  let className: string | undefined | null = undefined
+  export { className as class }
 
-  const { orientation } = getEmblaContext('<Carousel.Item/>');
+  const { orientation } = getEmblaContext('<Carousel.Item/>')
 </script>
 
 <div
@@ -19,6 +19,7 @@
     className
   )}
   data-embla-slide=""
-  {...$$restProps}>
+  {...$$restProps}
+>
   <slot />
 </div>

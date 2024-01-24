@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui';
-  import { cn, flyAndScale } from '$lib/utils';
+  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui'
+  import { cn, flyAndScale } from '$lib/utils'
 
-  type $$Props = ContextMenuPrimitive.ContentProps;
+  type $$Props = ContextMenuPrimitive.ContentProps
 
-  let className: $$Props['class'] = undefined;
-  export let transition: $$Props['transition'] = flyAndScale;
-  export let transitionConfig: $$Props['transitionConfig'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let transition: $$Props['transition'] = flyAndScale
+  export let transitionConfig: $$Props['transitionConfig'] = undefined
+  export { className as class }
 </script>
 
 <ContextMenuPrimitive.Content
@@ -18,6 +18,7 @@
     className
   )}
   {...$$restProps}
-  on:keydown>
+  on:keydown
+>
   <slot />
 </ContextMenuPrimitive.Content>

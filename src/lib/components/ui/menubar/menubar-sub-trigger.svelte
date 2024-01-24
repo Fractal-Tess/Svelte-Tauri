@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { Menubar as MenubarPrimitive } from 'bits-ui';
-  import { cn } from '$lib/utils';
-  import { ChevronRight } from 'lucide-svelte';
+  import { Menubar as MenubarPrimitive } from 'bits-ui'
+  import { cn } from '$lib/utils'
+  import { ChevronRight } from 'lucide-svelte'
 
   type $$Props = MenubarPrimitive.SubTriggerProps & {
-    inset?: boolean;
-  };
-  type $$Events = MenubarPrimitive.SubTriggerEvents;
+    inset?: boolean
+  }
+  type $$Events = MenubarPrimitive.SubTriggerEvents
 
-  let className: $$Props['class'] = undefined;
-  export let inset: $$Props['inset'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let inset: $$Props['inset'] = undefined
+  export { className as class }
 </script>
 
 <MenubarPrimitive.SubTrigger
@@ -25,7 +25,8 @@
   on:focusin
   on:focusout
   on:pointerleave
-  on:pointermove>
+  on:pointermove
+>
   <slot />
   <ChevronRight class="ml-auto h-4 w-4" />
 </MenubarPrimitive.SubTrigger>

@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Accordion as AccordionPrimitive } from 'bits-ui';
-  import { ChevronDown } from 'lucide-svelte';
-  import { cn } from '$lib/utils';
+  import { Accordion as AccordionPrimitive } from 'bits-ui'
+  import { ChevronDown } from 'lucide-svelte'
+  import { cn } from '$lib/utils'
 
-  type $$Props = AccordionPrimitive.TriggerProps;
-  type $$Events = AccordionPrimitive.TriggerEvents;
+  type $$Props = AccordionPrimitive.TriggerProps
+  type $$Events = AccordionPrimitive.TriggerEvents
 
-  let className: $$Props['class'] = undefined;
-  export let level: AccordionPrimitive.HeaderProps['level'] = 3;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let level: AccordionPrimitive.HeaderProps['level'] = 3
+  export { className as class }
 </script>
 
 <AccordionPrimitive.Header {level} class="flex">
@@ -18,7 +18,8 @@
       className
     )}
     {...$$restProps}
-    on:click>
+    on:click
+  >
     <slot />
     <ChevronDown class="h-4 w-4 transition-transform duration-200" />
   </AccordionPrimitive.Trigger>

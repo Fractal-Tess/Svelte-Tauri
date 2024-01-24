@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { Calendar as CalendarPrimitive } from 'bits-ui';
-  import { buttonVariants } from '$lib/components/ui/button';
-  import { cn } from '$lib/utils';
+  import { Calendar as CalendarPrimitive } from 'bits-ui'
+  import { buttonVariants } from '$lib/components/ui/button'
+  import { cn } from '$lib/utils'
 
-  type $$Props = CalendarPrimitive.DayProps;
-  type $$Events = CalendarPrimitive.DayEvents;
+  type $$Props = CalendarPrimitive.DayProps
+  type $$Events = CalendarPrimitive.DayEvents
 
-  export let date: $$Props['date'];
-  export let month: $$Props['month'];
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  export let date: $$Props['date']
+  export let month: $$Props['month']
+  let className: $$Props['class'] = undefined
+  export { className as class }
 </script>
 
 <CalendarPrimitive.Day
@@ -34,7 +34,8 @@
   let:selected
   let:disabled
   let:unavailable
-  let:builder>
+  let:builder
+>
   <slot {selected} {disabled} {unavailable} {builder}>
     {date.day}
   </slot>

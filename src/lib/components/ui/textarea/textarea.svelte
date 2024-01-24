@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { HTMLTextareaAttributes } from 'svelte/elements';
-  import { cn } from '$lib/utils';
+  import type { HTMLTextareaAttributes } from 'svelte/elements'
+  import { cn } from '$lib/utils'
 
-  type $$Props = HTMLTextareaAttributes;
+  type $$Props = HTMLTextareaAttributes
 
-  let className: $$Props['class'] = undefined;
-  export let value: $$Props['value'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let value: $$Props['value'] = undefined
+  export { className as class }
 </script>
 
 <textarea
@@ -27,4 +27,5 @@
   on:mouseleave
   on:paste
   on:input
-  {...$$restProps} />
+  {...$$restProps}
+/>

@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { Select as SelectPrimitive } from 'bits-ui';
-  import { ChevronDown } from 'lucide-svelte';
-  import { cn } from '$lib/utils';
+  import { Select as SelectPrimitive } from 'bits-ui'
+  import { ChevronDown } from 'lucide-svelte'
+  import { cn } from '$lib/utils'
 
-  type $$Props = SelectPrimitive.TriggerProps;
-  type $$Events = SelectPrimitive.TriggerEvents;
+  type $$Props = SelectPrimitive.TriggerProps
+  type $$Events = SelectPrimitive.TriggerEvents
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export { className as class }
 </script>
 
 <SelectPrimitive.Trigger
@@ -18,7 +18,8 @@
   {...$$restProps}
   let:builder
   on:click
-  on:keydown>
+  on:keydown
+>
   <slot {builder} />
   <div>
     <ChevronDown class="h-4 w-4 opacity-50" />

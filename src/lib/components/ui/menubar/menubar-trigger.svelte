@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { Menubar as MenubarPrimitive } from 'bits-ui';
-  import { cn } from '$lib/utils';
+  import { Menubar as MenubarPrimitive } from 'bits-ui'
+  import { cn } from '$lib/utils'
 
-  type $$Props = MenubarPrimitive.TriggerProps;
-  type $$Events = MenubarPrimitive.TriggerEvents;
+  type $$Props = MenubarPrimitive.TriggerProps
+  type $$Events = MenubarPrimitive.TriggerEvents
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export { className as class }
 </script>
 
 <MenubarPrimitive.Trigger
@@ -17,6 +17,7 @@
   on:click
   on:keydown
   on:pointerenter
-  {...$$restProps}>
+  {...$$restProps}
+>
   <slot />
 </MenubarPrimitive.Trigger>

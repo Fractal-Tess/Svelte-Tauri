@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui';
-  import { cn } from '$lib/utils';
-  import { ChevronRight } from 'lucide-svelte';
+  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui'
+  import { cn } from '$lib/utils'
+  import { ChevronRight } from 'lucide-svelte'
 
   type $$Props = ContextMenuPrimitive.SubTriggerProps & {
-    inset?: boolean;
-  };
-  type $$Events = ContextMenuPrimitive.SubTriggerEvents;
+    inset?: boolean
+  }
+  type $$Events = ContextMenuPrimitive.SubTriggerEvents
 
-  let className: $$Props['class'] = undefined;
-  export let inset: $$Props['inset'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let inset: $$Props['inset'] = undefined
+  export { className as class }
 </script>
 
 <ContextMenuPrimitive.SubTrigger
@@ -25,7 +25,8 @@
   on:focusin
   on:focusout
   on:pointerleave
-  on:pointermove>
+  on:pointermove
+>
   <slot />
   <ChevronRight class="ml-auto h-4 w-4" />
 </ContextMenuPrimitive.SubTrigger>

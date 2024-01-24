@@ -2,10 +2,10 @@
   import {
     Toaster as Sonner,
     type ToasterProps as SonnerProps
-  } from 'svelte-sonner';
-  import { mode } from 'mode-watcher';
+  } from 'svelte-sonner'
+  import { mode } from 'mode-watcher'
 
-  type $$Props = SonnerProps;
+  type $$Props = SonnerProps
 </script>
 
 <Sonner
@@ -22,4 +22,5 @@
         'group-[.toast]:bg-muted group-[.toast]:text-muted-foreground'
     }
   }}
-  {...$$restProps} />
+  {...$$restProps}
+/>

@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui';
-  import { cn, flyAndScale } from '$lib/utils';
+  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui'
+  import { cn, flyAndScale } from '$lib/utils'
 
-  type $$Props = ContextMenuPrimitive.SubContentProps;
+  type $$Props = ContextMenuPrimitive.SubContentProps
 
-  let className: $$Props['class'] = undefined;
-  export let transition: $$Props['transition'] = flyAndScale;
+  let className: $$Props['class'] = undefined
+  export let transition: $$Props['transition'] = flyAndScale
   export let transitionConfig: $$Props['transitionConfig'] = {
     x: -10,
     y: 0
-  };
-  export { className as class };
+  }
+  export { className as class }
 </script>
 
 <ContextMenuPrimitive.SubContent
@@ -23,6 +23,7 @@
   {...$$restProps}
   on:keydown
   on:focusout
-  on:pointermove>
+  on:pointermove
+>
   <slot />
 </ContextMenuPrimitive.SubContent>

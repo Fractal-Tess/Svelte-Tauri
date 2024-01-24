@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Calendar as CalendarPrimitive } from 'bits-ui';
-  import { ChevronLeft } from 'lucide-svelte';
-  import { buttonVariants } from '$lib/components/ui/button';
-  import { cn } from '$lib/utils';
+  import { Calendar as CalendarPrimitive } from 'bits-ui'
+  import { ChevronLeft } from 'lucide-svelte'
+  import { buttonVariants } from '$lib/components/ui/button'
+  import { cn } from '$lib/utils'
 
-  type $$Props = CalendarPrimitive.PrevButtonProps;
-  type $$Events = CalendarPrimitive.PrevButtonEvents;
+  type $$Props = CalendarPrimitive.PrevButtonProps
+  type $$Events = CalendarPrimitive.PrevButtonEvents
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export { className as class }
 </script>
 
 <CalendarPrimitive.PrevButton
@@ -19,7 +19,8 @@
     className
   )}
   {...$$restProps}
-  let:builder>
+  let:builder
+>
   <slot {builder}>
     <ChevronLeft class="h-4 w-4" />
   </slot>

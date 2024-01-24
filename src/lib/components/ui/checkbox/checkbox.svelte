@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Checkbox as CheckboxPrimitive } from 'bits-ui';
-  import { Check, Minus } from 'lucide-svelte';
-  import { cn } from '$lib/utils';
+  import { Checkbox as CheckboxPrimitive } from 'bits-ui'
+  import { Check, Minus } from 'lucide-svelte'
+  import { cn } from '$lib/utils'
 
-  type $$Props = CheckboxPrimitive.Props;
-  type $$Events = CheckboxPrimitive.Events;
+  type $$Props = CheckboxPrimitive.Props
+  type $$Events = CheckboxPrimitive.Events
 
-  let className: $$Props['class'] = undefined;
-  export let checked: $$Props['checked'] = false;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let checked: $$Props['checked'] = false
+  export { className as class }
 </script>
 
 <CheckboxPrimitive.Root
@@ -18,11 +18,13 @@
   )}
   bind:checked
   {...$$restProps}
-  on:click>
+  on:click
+>
   <CheckboxPrimitive.Indicator
     class={cn('flex h-4 w-4 items-center justify-center text-current')}
     let:isChecked
-    let:isIndeterminate>
+    let:isIndeterminate
+  >
     {#if isChecked}
       <Check class="h-3.5 w-3.5" />
     {:else if isIndeterminate}

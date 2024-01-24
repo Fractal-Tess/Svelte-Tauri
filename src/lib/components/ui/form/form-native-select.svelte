@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { Form as FormPrimitive } from 'formsnap';
-  import { buttonVariants } from '$lib/components/ui/button';
-  import { cn } from '$lib/utils';
-  import { ChevronDown } from 'lucide-svelte';
-  import type { HTMLSelectAttributes } from 'svelte/elements';
+  import { Form as FormPrimitive } from 'formsnap'
+  import { buttonVariants } from '$lib/components/ui/button'
+  import { cn } from '$lib/utils'
+  import { ChevronDown } from 'lucide-svelte'
+  import type { HTMLSelectAttributes } from 'svelte/elements'
 
-  type $$Props = HTMLSelectAttributes;
+  type $$Props = HTMLSelectAttributes
 
-  let className: string | undefined | null = undefined;
-  export { className as class };
+  let className: string | undefined | null = undefined
+  export { className as class }
 </script>
 
 <div class="relative">
@@ -18,7 +18,8 @@
       'appearance-none bg-transparent font-normal',
       className
     )}
-    {...$$restProps}>
+    {...$$restProps}
+  >
     <slot />
   </FormPrimitive.Select>
   <ChevronDown class="absolute right-3 top-2.5 h-4 w-4 opacity-50" />

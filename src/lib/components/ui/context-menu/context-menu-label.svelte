@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui';
-  import { cn } from '$lib/utils';
+  import { ContextMenu as ContextMenuPrimitive } from 'bits-ui'
+  import { cn } from '$lib/utils'
 
   type $$Props = ContextMenuPrimitive.LabelProps & {
-    inset?: boolean;
-  };
+    inset?: boolean
+  }
 
-  let className: $$Props['class'] = undefined;
-  export let inset: $$Props['inset'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let inset: $$Props['inset'] = undefined
+  export { className as class }
 </script>
 
 <ContextMenuPrimitive.Label
@@ -17,6 +17,7 @@
     inset && 'pl-8',
     className
   )}
-  {...$$restProps}>
+  {...$$restProps}
+>
   <slot />
 </ContextMenuPrimitive.Label>

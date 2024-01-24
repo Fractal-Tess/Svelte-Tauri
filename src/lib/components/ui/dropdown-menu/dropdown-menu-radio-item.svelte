@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui';
-  import { cn } from '$lib/utils';
-  import { Circle } from 'lucide-svelte';
+  import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui'
+  import { cn } from '$lib/utils'
+  import { Circle } from 'lucide-svelte'
 
-  type $$Props = DropdownMenuPrimitive.RadioItemProps;
-  type $$Events = DropdownMenuPrimitive.RadioItemEvents;
+  type $$Props = DropdownMenuPrimitive.RadioItemProps
+  type $$Events = DropdownMenuPrimitive.RadioItemEvents
 
-  let className: $$Props['class'] = undefined;
-  export let value: $$Props['value'];
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export let value: $$Props['value']
+  export { className as class }
 </script>
 
 <DropdownMenuPrimitive.RadioItem
@@ -24,7 +24,8 @@
   on:focusout
   on:pointerdown
   on:pointerleave
-  on:pointermove>
+  on:pointermove
+>
   <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
     <DropdownMenuPrimitive.RadioIndicator>
       <Circle class="h-2 w-2 fill-current" />

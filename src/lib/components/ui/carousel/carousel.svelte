@@ -1,57 +1,57 @@
 <script lang="ts">
-  import emblaCarouselSvelte from 'embla-carousel-svelte';
+  import emblaCarouselSvelte from 'embla-carousel-svelte'
   import {
     setEmblaContex,
     type CarouselProps,
     type CarouselAPI
-  } from './context.js';
-  import { cn } from '$lib/utils.js';
-  import { writable } from 'svelte/store';
-  import { onDestroy } from 'svelte';
+  } from './context.js'
+  import { cn } from '$lib/utils.js'
+  import { writable } from 'svelte/store'
+  import { onDestroy } from 'svelte'
 
-  type $$Props = CarouselProps;
+  type $$Props = CarouselProps
 
-  export let opts = {};
-  export let plugins: NonNullable<$$Props['plugins']> = [];
-  export let api: $$Props['api'] = undefined;
-  export let orientation: NonNullable<$$Props['orientation']> = 'horizontal';
+  export let opts = {}
+  export let plugins: NonNullable<$$Props['plugins']> = []
+  export let api: $$Props['api'] = undefined
+  export let orientation: NonNullable<$$Props['orientation']> = 'horizontal'
 
-  let className: $$Props['class'] = undefined;
-  export { className as class };
+  let className: $$Props['class'] = undefined
+  export { className as class }
 
-  const apiStore = writable<CarouselAPI | undefined>(undefined);
-  const orientationStore = writable(orientation);
-  const canScrollPrev = writable(false);
-  const canScrollNext = writable(false);
+  const apiStore = writable<CarouselAPI | undefined>(undefined)
+  const orientationStore = writable(orientation)
+  const canScrollPrev = writable(false)
+  const canScrollNext = writable(false)
 
-  $: orientationStore.set(orientation);
+  $: orientationStore.set(orientation)
 
   function scrollPrev() {
-    api?.scrollPrev();
+    api?.scrollPrev()
   }
   function scrollNext() {
-    api?.scrollNext();
+    api?.scrollNext()
   }
 
   function onSelect(api: CarouselAPI) {
-    if (!api) return;
-    canScrollPrev.set(api.canScrollPrev());
-    canScrollNext.set(api.canScrollNext());
+    if (!api) return
+    canScrollPrev.set(api.canScrollPrev())
+    canScrollNext.set(api.canScrollNext())
   }
 
   $: if (api) {
-    onSelect(api);
-    api.on('select', onSelect);
-    api.on('reInit', onSelect);
+    onSelect(api)
+    api.on('select', onSelect)
+    api.on('reInit', onSelect)
   }
 
   function handleKeyDown(e: KeyboardEvent) {
     if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      scrollPrev();
+      e.preventDefault()
+      scrollPrev()
     } else if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      scrollNext();
+      e.preventDefault()
+      scrollNext()
     }
   }
 
@@ -63,17 +63,17 @@
     canScrollNext,
     canScrollPrev,
     handleKeyDown
-  });
+  })
 
   function onInit(event: CustomEvent<CarouselAPI>) {
-    api = event.detail;
-    console.log(api.slideNodes());
-    apiStore.set(api);
+    api = event.detail
+    console.log(api.slideNodes())
+    apiStore.set(api)
   }
 
   onDestroy(() => {
-    api?.off('select', onSelect);
-  });
+    api?.off('select', onSelect)
+  })
 </script>
 
 <div
@@ -92,6 +92,7 @@
   on:mouseleave
   role="region"
   aria-roledescription="carousel"
-  {...$$restProps}>
+  {...$$restProps}
+>
   <slot />
 </div>
