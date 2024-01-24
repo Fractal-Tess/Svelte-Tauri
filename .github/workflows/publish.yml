@@ -21,7 +21,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Node.js
+      - name: Pnpm setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.10
+
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: 20
