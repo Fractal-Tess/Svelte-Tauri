@@ -1,14 +1,16 @@
 <script lang="ts">
-  import { theme } from '$lib/stores/theme';
-  import Router from '$lib/router/Router.svelte';
-  import BaseLayout from '$lib/layout/BaseLayout.svelte';
-
-  $: {
-    document.documentElement.setAttribute('data-theme', $theme);
-    document.documentElement.classList.value = $theme;
-  }
+  import Router from '$router/Router.svelte'
+  import { ModeWatcher, mode } from 'mode-watcher'
+  import Header from '$lib/components/HeaderNav.svelte'
+  import { Toaster } from 'svelte-sonner'
 </script>
 
-<BaseLayout>
-  <Router />
-</BaseLayout>
+<ModeWatcher defaultMode="dark" />
+<Toaster theme={$mode} />
+
+<div class="relative flex flex-col h-screen" data-vaul-drawer-wrapper id="page">
+  <Header />
+  <main class="flex-1">
+    <Router />
+  </main>
+</div>

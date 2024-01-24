@@ -1,15 +1,16 @@
-import './styles.pcss';
-import App from './App.svelte';
+import './styles.postcss'
+import App from './App.svelte'
 
-const target = document.getElementById('app');
-if (!target)
+const target = document.getElementById('app')
+if (!target) {
   throw new Error(
-    "The element with id of 'app' wasn't found on the base html file."
-  );
+    "The element with id of 'app' was not found on the base html file. Create that element and try again"
+  )
+}
 
 const app = new App({
   target,
   intro: true
-});
+})
 
-export default app;
+export default app
