@@ -1,5 +1,11 @@
 # svelte-tauri
 
+## 0.2.1
+
+### Patch Changes
+
+- 175be29: Make a helper script to allow syncing pkg versions in the project
+
 ## 0.2.0
 
 ### Minor Changes
