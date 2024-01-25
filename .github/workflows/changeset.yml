@@ -43,5 +43,6 @@ jobs:
           version: pnpm changeset:version
           title: Version App
           commit: Version App
+          publish: echo "Skipping ..."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -7,6 +7,6 @@
   "arrowParens": "avoid",
   "endOfLine": "lf",
   "semi": false,
-  "plugins": ["prettier-plugin-svelte"],
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-toml"],
   "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

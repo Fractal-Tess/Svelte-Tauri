@@ -1,6 +1,6 @@
 [package]
 name = "svelte-tauri"
-version = "0.0.2"
+version = "0.2.1"
 description = "Svelte-Tauri template starter"
 authors = ["Fractal-Tess"]
 license = "MIT"
@@ -9,31 +9,38 @@ default-run = "svelte-tauri"
 edition = "2021"
 rust-version = "1.71.1"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[build-dependencies]
-tauri-build = { version = "1.5.1", features = [] }
+[build-dependencies.tauri-build]
+version = "1.5.1"
+features = []
 
 [dependencies]
 serde_json = "1.0.111"
 sha2 = "0.10.8"
-tauri-plugin-window-state = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "dev" }
-serde = { version = "1.0.195", features = ["derive"] }
-tauri = { version = "1.5.4", features = ["api-all", "devtools", "updater"] }
 thiserror = "1.0.56"
 specta = "1.0.5"
-tauri-specta = { version = "1.0.2", features = ["javascript", "typescript"] }
+
+[dependencies.tauri-plugin-window-state]
+git = "https://github.com/tauri-apps/plugins-workspace"
+branch = "dev"
+
+[dependencies.serde]
+version = "1.0.195"
+features = ["derive"]
+
+[dependencies.tauri]
+version = "1.5.4"
+features = ["api-all", "devtools", "updater"]
+
+[dependencies.tauri-specta]
+version = "1.0.2"
+features = ["javascript", "typescript"]
+
 [features]
-# by default Tauri runs in production mode
-# when `tauri dev` runs it is executed with `cargo run --no-default-features` if `devPath` is an URL
 default = ["custom-protocol"]
-# this feature is used used for production builds where `devPath` points to the filesystem
-# DO NOT remove this
 custom-protocol = ["tauri/custom-protocol"]
 
-
 [profile.release]
-panic = 'abort'
+panic = "abort"
 codegen-units = 1
 lto = true
 opt-level = 3
