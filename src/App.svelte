@@ -1,7 +1,7 @@
 <script lang="ts">
   import Router from '$router/Router.svelte'
   import { ModeWatcher, mode } from 'mode-watcher'
-  import Header from '$lib/components/HeaderNav.svelte'
+  import Header from '$lib/components/Header.svelte'
   import { Toaster } from 'svelte-sonner'
 </script>
 
