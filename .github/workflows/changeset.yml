@@ -36,6 +36,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
 
+      - uses: rui314/setup-mold@v1
+
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
