@@ -90,7 +90,7 @@
   "packageManager": "pnpm@8.10.0",
   "engineStrict": false,
   "engines": {
-    "pnpm": ">=8.10.0",
-    "node": ">20.0.0 <21.0.0"
+    "pnpm": ">=8.x",
+    "node": ">20.0.x <21.0.x"
   }
 }
