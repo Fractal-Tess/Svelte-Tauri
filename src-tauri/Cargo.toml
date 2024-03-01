@@ -16,7 +16,7 @@ features = []
 [dependencies]
 serde_json = "1.0.113"
 sha2 = "0.10.8"
-thiserror = "1.0.56"
+thiserror = "1.0.57"
 specta = "1.0.5"
 
 [dependencies.tauri-plugin-window-state]
