@@ -63,8 +63,8 @@ devDependencies:
     specifier: ^0.0.13
     version: 0.0.13(svelte@4.2.9)
   embla-carousel-svelte:
-    specifier: 8.0.0-rc21
-    version: 8.0.0-rc21(svelte@4.2.9)
+    specifier: 8.0.0
+    version: 8.0.0(svelte@4.2.9)
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -1882,26 +1882,26 @@ packages:
     resolution: {integrity: sha512-NLE0GIy1OL9wRiKL20h9TkctBEYZuc99tquSS9MVdTahnuHputoETHeqDzgqGqyOY9NUH0g9wjfEuw5OD+wRcQ==}
     dev: true
 
-  /embla-carousel-reactive-utils@8.0.0-rc21(embla-carousel@8.0.0-rc21):
-    resolution: {integrity: sha512-TnV49hoTdwfcKr2vgQHQ3zcCqJSkvLJ5rR/pGzmEx5GeO07CV/e755lkSD7No0C6cz+JFB8dcHV7uS+5Gnc7Lg==}
+  /embla-carousel-reactive-utils@8.0.0(embla-carousel@8.0.0):
+    resolution: {integrity: sha512-JCw0CqCXI7tbHDRogBb9PoeMLyjEC1vpN0lDOzUjmlfVgtfF+ffLaOK8bVtXVUEbNs/3guGe3NSzA5J5aYzLzw==}
     peerDependencies:
-      embla-carousel: 8.0.0-rc21
+      embla-carousel: 8.0.0
     dependencies:
-      embla-carousel: 8.0.0-rc21
+      embla-carousel: 8.0.0
     dev: true
 
-  /embla-carousel-svelte@8.0.0-rc21(svelte@4.2.9):
-    resolution: {integrity: sha512-OiRSjPbgkqFR49dCha4/jL0R/LYD/gH30r/1xW4RRfXkQd0M98fzUGukRlV6yBAugv5tfuP+5uRMO1FBFjxzlQ==}
+  /embla-carousel-svelte@8.0.0(svelte@4.2.9):
+    resolution: {integrity: sha512-twoIN3jpSZB2Gc7pI2mfN0vjmXgZQbwgQ4T4OUa2OEXBU/jRbevhb9kd2RtqzU2lalB3j2a1lCE5Ey9DQtxr6Q==}
     peerDependencies:
       svelte: ^3.49.0 || ^4.0.0
     dependencies:
-      embla-carousel: 8.0.0-rc21
-      embla-carousel-reactive-utils: 8.0.0-rc21(embla-carousel@8.0.0-rc21)
+      embla-carousel: 8.0.0
+      embla-carousel-reactive-utils: 8.0.0(embla-carousel@8.0.0)
       svelte: 4.2.9
     dev: true
 
-  /embla-carousel@8.0.0-rc21:
-    resolution: {integrity: sha512-rK//vyPIhmD/5QUDtjk9A5RxPoDZ5LOATYMVSFECAzwcAe7yJmqXQbdYzEZf4ASOR+ivod5msqXsKgZXypA35Q==}
+  /embla-carousel@8.0.0:
+    resolution: {integrity: sha512-ecixcyqS6oKD2nh5Nj5MObcgoSILWNI/GtBxkidn5ytFaCCmwVHo2SecksaQZHcARMMpIR2dWOlSIdA1LkZFUA==}
     dev: true
 
   /emoji-regex@10.3.0:
