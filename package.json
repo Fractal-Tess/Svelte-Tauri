@@ -76,7 +76,7 @@
     "svelte-spa-router": "^4.0.1",
     "sveltekit-superforms": "^1.13.4",
     "tailwind-merge": "^2.2.1",
-    "tailwind-variants": "^0.1.20",
+    "tailwind-variants": "^0.2.1",
     "tailwindcss": "^3.4.1",
     "toml": "^3.0.0",
     "tslib": "^2.6.2",
