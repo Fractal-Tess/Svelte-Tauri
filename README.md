@@ -22,10 +22,11 @@
   - Tauri window state manager plugin
   - Tauri store plugin
   - Husky
+  - Automatic Rust to TS ipc types 
 - Automation
   - Husky
   - Changeset
-  - TODO: Testing
+  - TODO: add testing framework 
 
 ## Requirements
 
