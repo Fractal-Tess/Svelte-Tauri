@@ -1,4 +1,5 @@
-n9ame: Build and publish
+name: Build and publish
+
 on:
   workflow_dispatch:
   push:
