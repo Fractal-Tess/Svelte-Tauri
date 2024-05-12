@@ -1,6 +1,6 @@
 {
   "name": "svelte-tauri",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "license": "MIT",
   "repository": {
@@ -17,21 +17,11 @@
     "build": "tauri build",
     "dev": "tauri dev",
     "format": "prettier --write .",
-    "postinstall": "husky install",
-    "lint": "eslint .",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "svelte:build": "vite build",
-    "svelte:dev": "vite dev",
-    "changeset:version": "changeset version && tsx SyncVersion.ts"
-  },
-  "lint-staged": {
-    "*.{ts,svelte}": [
-      "eslint --cache --fix",
-      "prettier --write --ignore-unknown"
-    ]
+    "svelte:dev": "vite dev"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
     "@fontsource/roboto": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -58,8 +48,6 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "eslint-plugin-unused-imports": "^3.2.0",
     "formsnap": "^1.0.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
     "lucide-svelte": "^0.378.0",
     "mode-watcher": "^0.3.0",
     "postcss": "^8.4.38",
@@ -89,5 +77,8 @@
   "engines": {
     "pnpm": ">=9.x",
     "node": ">20.0.x <21.0.x"
+  },
+  "dependencies": {
+    "svelte-tauri": "link:"
   }
 }
