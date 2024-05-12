@@ -1,4 +1,4 @@
-name: Build and publish
+n9ame: Build and publish
 on:
   workflow_dispatch:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Pnpm setup
         uses: pnpm/action-setup@v2
         with:
-          version: 8.10
+          version: 9
 
       - name: Setup Node.js
         uses: actions/setup-node@v3

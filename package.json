@@ -86,7 +86,6 @@
     "vite": "^5.2.11",
     "zod": "^3.23.8"
   },
-  "engineStrict": false,
   "engines": {
     "pnpm": ">=9.x",
     "node": ">20.0.x <21.0.x"
