@@ -10,7 +10,7 @@
   "author": {
     "name": "Fractal-Tess",
     "email": "vgfractal@gmail.com",
-    "url": "https://gist.github.com/Fractal-Tess"
+    "url": "https://github.com/Fractal-Tess"
   },
   "type": "module",
   "scripts": {
@@ -21,7 +21,7 @@
     "svelte:build": "vite build",
     "svelte:dev": "vite dev"
   },
-  "devDependencies": {
+  "dependencies": {
     "@fontsource/roboto": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -77,8 +77,5 @@
   "engines": {
     "pnpm": ">=9.x",
     "node": ">20.0.x <21.0.x"
-  },
-  "dependencies": {
-    "svelte-tauri": "link:"
   }
 }
