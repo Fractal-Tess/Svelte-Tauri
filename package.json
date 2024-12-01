@@ -40,7 +40,7 @@
     "bits-ui": "^0.21.7",
     "clsx": "^2.1.1",
     "cmdk-sv": "^0.0.17",
-    "embla-carousel-svelte": "8.0.4",
+    "embla-carousel-svelte": "8.5.1",
     "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^3.1.0",
