@@ -41,7 +41,7 @@
     "clsx": "^2.1.1",
     "cmdk-sv": "^0.0.17",
     "embla-carousel-svelte": "8.0.4",
-    "eslint": "^9.2.0",
+    "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-svelte": "2.39.0",
