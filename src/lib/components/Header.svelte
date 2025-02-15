@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { appWindow } from '@tauri-apps/api/window'
+  import { getCurrentWebviewWindow } from '@tauri-apps/api/webviewWindow'
   import { faXmark, faWindowMinimize } from '@fortawesome/free-solid-svg-icons'
   import { faGithub } from '@fortawesome/free-brands-svg-icons'
   import Fa from 'svelte-fa'
@@ -10,6 +10,7 @@
   import { cn } from '$lib/utils'
 
   import { location } from 'svelte-spa-router'
+const appWindow = getCurrentWebviewWindow()
 
   // You can structure your links however you'd like, but I like to keep them in an array of objects
   type Link = {

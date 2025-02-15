@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Input } from '$components/ui/input'
   import { Label } from '$components/ui/label'
-  import { hash256sum } from '$lib/ipc'
+  import { commands } from '$commands'
 
   let hashInput = 'String to hash'
   let hashOutput = ''
 
-  $: hash256sum(hashInput).then(hash => (hashOutput = hash))
+  $: commands.hash256sum(hashInput).then(hash => (hashOutput = hash))
 </script>
 
 <section class="flex items-center justify-center flex-col gap-8">

@@ -1,6 +1,6 @@
 [package]
 name = "svelte-tauri"
-version = "0.2.2"
+version = "0.3.0"
 description = "Svelte-Tauri template starter"
 authors = ["Fractal-Tess"]
 license = "MIT"
@@ -9,38 +9,24 @@ default-run = "svelte-tauri"
 edition = "2021"
 rust-version = "1.71.1"
 
-[build-dependencies.tauri-build]
-version = "1.5.2"
-features = []
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+
+name = "tauri_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
 
 [dependencies]
-serde_json = "1.0.113"
+tauri = { version = "2.0", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2.0.11"
 sha2 = "0.10.8"
-thiserror = "1.0.56"
-specta = "1.0.5"
-
-[dependencies.tauri-plugin-window-state]
-git = "https://github.com/tauri-apps/plugins-workspace"
-branch = "dev"
-
-[dependencies.serde]
-version = "1.0.196"
-features = ["derive"]
-
-[dependencies.tauri]
-version = "1.6.5"
-features = ["api-all", "devtools", "updater"]
-
-[dependencies.tauri-specta]
-version = "1.0.2"
-features = ["javascript", "typescript"]
-
-[features]
-default = ["custom-protocol"]
-custom-protocol = ["tauri/custom-protocol"]
-
-[profile.release]
-panic = "abort"
-codegen-units = 1
-lto = true
-opt-level = 3
+specta = "2.0.0-rc.21"
+specta-typescript = "0.0.9"
+tauri-specta = { version = "2.0.0-rc.21", features = ["derive", "typescript"] }

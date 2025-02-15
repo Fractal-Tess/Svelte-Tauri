@@ -16,7 +16,8 @@
     "isolatedModules": true,
     "paths": {
       "$lib/*": ["src/lib/*"],
-      "$ipc": ["src/lib/ipc.ts"],
+      "$commands": ["src/ipc/commands.ts"],
+      "$events": ["src/ipc/events.ts"],
       "$components/*": ["src/lib/components/*"],
       "$router/*": ["src/lib/router/*"]
     }
