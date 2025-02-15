@@ -1,6 +1,6 @@
 {
   "name": "svelte-tauri",
-  "version": "0.2.2",
+  "version": "0.3.1",
   "private": true,
   "license": "MIT",
   "repository": {
@@ -76,6 +76,7 @@
     "node": ">20.0.x <21.0.x"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.0.6"
+    "@tailwindcss/vite": "^4.0.6",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

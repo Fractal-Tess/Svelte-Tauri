@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Input } from '$components/ui/input'
   import { Label } from '$components/ui/label'
-  import { commands } from '$commands'
+  import { commands } from '$lib/ipc'
 
   let hashInput = 'String to hash'
   let hashOutput = ''

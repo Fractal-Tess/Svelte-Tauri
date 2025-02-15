@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { commands } from '$commands'
+  import { commands } from '$lib/ipc'
   import { Input } from '$components/ui/input'
   import { Label } from '$components/ui/label'
   import { Button } from '$components/ui/button'

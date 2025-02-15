@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Button } from '$components/ui/button'
-  import { commands } from '$commands'
+  import { commands } from '$lib/ipc'
   import { cn } from '$lib/utils'
 
   let message = ''

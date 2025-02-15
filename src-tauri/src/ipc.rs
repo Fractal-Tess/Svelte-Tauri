@@ -25,7 +25,7 @@ pub fn register_ipc_handlers(app: Builder<Wry>) -> Builder<Wry> {
     // Generate the IPC types
     #[cfg(debug_assertions)] // <- Only export on non-release builds
     builder
-        .export(Typescript::default(), "../src/ipc.ts")
+        .export(Typescript::default(), "../src/lib/ipc.ts")
         .expect("Failed to export typescript bindings");
 
     // Register the commands and events in the tauri app instance
