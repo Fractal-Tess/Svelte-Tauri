@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import tailwindcss from '@tailwindcss/vite'
 import { join } from 'node:path'
 
 export default defineConfig({
-  plugins: [svelte()],
+  plugins: [tailwindcss(), svelte()],
 
   resolve: {
     alias: {
       $lib: join(__dirname, 'src/lib'),
-      $ipc: join(__dirname, 'src/lib/ipc.ts'),
+      $events: join(__dirname, 'src/ipc/events.ts'),
       $components: join(__dirname, 'src/lib/components'),
       $router: join(__dirname, 'src/lib/router')
     }

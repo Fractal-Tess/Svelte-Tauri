@@ -1,12 +1,10 @@
-import sveltePreprocess from 'svelte-preprocess'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
-export default {
-  // Consult https://github.com/sveltejs/svelte-preprocess
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  // Consult https://svelte.dev/docs/kit/integrations
   // for more information about preprocessors
-  preprocess: [
-    sveltePreprocess({
-      postcss: true,
-      sourceMap: !!process.env.TAURI_DEBUG
-    })
-  ]
+  preprocess: vitePreprocess()
 }
+
+export default config

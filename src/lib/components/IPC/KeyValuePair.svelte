@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { storeReadKey, storeSetKey } from '$lib/ipc'
+  import { commands } from '$lib/ipc'
   import { Input } from '$components/ui/input'
   import { Label } from '$components/ui/label'
   import { Button } from '$components/ui/button'
@@ -9,7 +9,7 @@
   let val = ''
 
   async function setValueWithKey() {
-    await storeSetKey(key, val)
+    await commands.storeSetKey(key, val)
     let id = (Math.random() + 1).toString(36).substring(16)
     toast(`You have set the key '${key}' to be the value of '${val}'`, {
       id,
@@ -23,7 +23,7 @@
   }
 
   async function readValFromKey() {
-    const val = await storeReadKey(key)
+    const val = await commands.storeReadKey(key)
     let id = (Math.random() + 1).toString(36).substring(16)
     toast(`You have read the key '${key}' to be the value of '${val}'`, {
       id,

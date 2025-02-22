@@ -1,11 +1,11 @@
 <script lang="ts">
   import { Button } from '$components/ui/button'
-  import { helloTauri } from '$lib/ipc'
+  import { commands } from '$lib/ipc'
   import { cn } from '$lib/utils'
 
   let message = ''
   async function callTauri() {
-    message = await helloTauri()
+    message = await commands.helloTauri()
   }
 </script>
 
