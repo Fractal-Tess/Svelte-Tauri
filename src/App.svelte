@@ -9,7 +9,7 @@
 <Toaster theme={$mode} />
 
 <div class="relative flex flex-col h-screen" data-vaul-drawer-wrapper id="page">
-  <!-- <Header /> -->
+  <Header />
   <main class="flex-1">
     <Router />
   </main>
