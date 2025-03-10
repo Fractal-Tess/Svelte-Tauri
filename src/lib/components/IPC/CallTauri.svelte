@@ -3,13 +3,13 @@
   import { commands } from '$lib/ipc'
   import { cn } from '$lib/utils'
 
-  let message = ''
+  let message = $state('')
   async function callTauri() {
     message = await commands.helloTauri()
   }
 </script>
 
-<Button variant="outline" class="px-8 py-6" on:click={callTauri}
+<Button variant="outline" class="px-8 py-6" onclick={callTauri}
   >Call Tauri</Button
 >
 

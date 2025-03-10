@@ -5,8 +5,21 @@
   import { Button } from '$components/ui/button'
   import { toast } from 'svelte-sonner'
 
-  let key = ''
-  let val = ''
+  let key = $state('')
+  let val = $state('')
+  let enableSetKey = $state(false)
+  let enableReadKey = $state(false)
+
+  $effect(() => {
+    if (key.length > 0 && val.length > 0) {
+      enableSetKey = true
+    }
+  })
+  $effect(() => {
+    if (key.length > 0) {
+      enableReadKey = true
+    }
+  })
 
   async function setValueWithKey() {
     await commands.storeSetKey(key, val)
@@ -38,7 +51,7 @@
 </script>
 
 <div class="flex flex-col gap-4 items-center justify-center">
-  <div class="flex gap-4">
+  <div class="grid gap-4 grid-cols-2 w-full">
     <div class="flex-1 flex-col gap-y-2 flex">
       <Label for="key">Key</Label>
       <Input id="key" bind:value={key} />
@@ -48,9 +61,7 @@
       <Label for="val">Value</Label>
       <Input id="val" bind:value={val} />
     </div>
-  </div>
-  <div class="flex w-full gap-4">
-    <Button class="w-full bg-primary" on:click={setValueWithKey}>Set</Button>
-    <Button class="w-full" on:click={readValFromKey}>Read</Button>
+    <Button disabled={!enableSetKey} onclick={setValueWithKey}>Set</Button>
+    <Button disabled={!enableReadKey} onclick={readValFromKey}>Read</Button>
   </div>
 </div>

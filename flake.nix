@@ -10,7 +10,7 @@
     let
       eachSystem = f:
         nixpkgs.lib.genAttrs (import systems)
-        (system: f nixpkgs.legacyPackages.${system});
+          (system: f nixpkgs.legacyPackages.${system});
 
       libraries = pkgs:
         with pkgs; [
@@ -42,38 +42,38 @@
           cargo
           rustc
           rustfmt
+
           nodejs_22
           pnpm
-          yarn
           prettierd
-          nodePackages."npm-check-updates"
-          npkill
-          lolcat
         ];
-    in {
+    in
+    {
       devShells = eachSystem (pkgs: {
         default = pkgs.mkShell {
           buildInputs = packages pkgs;
 
           shellHook = ''
-            echo "#
-            #  ______                  _ 
-            # /_  __/___ ___  _______(_)
-            #  / / / __ `/ / / / ___/ / 
-            # / / / /_/ / /_/ / /  / /  
-            #/_/  \__,_/\__,_/_/  /_/   
-            #
+            echo "
+              ______                   
+             /_  __/___ ___  _______(_)
+              / / / __ `/ / / / ___/ / 
+             / / / /_/ / /_/ / /  / /  
+            /_/  \__,_/\__,_/_/  /_/   
             Tauri Development Environment
             NodeJS - $(${pkgs.nodejs_22}/bin/node --version)
             Rustc - $(${pkgs.rustc}/bin/rustc --version)
             " | lolcat
-
 
             export LD_LIBRARY_PATH=${
               pkgs.lib.makeLibraryPath (libraries pkgs)
             }:$LD_LIBRARY_PATH
             export XDG_DATA_DIRS=${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}:$XDG_DATA_DIRS
           '';
+
+          WEBKIT_DISABLE_COMPOSITING_MODE = 1;
+          RUST_BACKTRACE = "full";
+          GDK_BACKEND = "x11";
         };
       });
     };

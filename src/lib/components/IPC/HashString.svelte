@@ -21,7 +21,7 @@
     focus:outline-none focus:ring-secondary"
     />
   </div>
-  <code class="border border-border rounded-md px-2 py-1 text-sm"
+  <code class="border border-border rounded-md px-8 py-4 text-sm"
     >{hashOutput}</code
   >
 </section>
