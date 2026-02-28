@@ -1,0 +1,10 @@
+pre-commit:
+  parallel: true
+  commands:
+    svelte-check:
+      glob: "*.{svelte,ts}"
+      run: bunx svelte-check --tsconfig ./tsconfig.json
+    cargo-check:
+      glob: "*.rs"
+      root: src-tauri
+      run: cargo check
