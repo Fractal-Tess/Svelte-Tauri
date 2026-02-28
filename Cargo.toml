@@ -1,0 +1,31 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "src-tauri"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Fractal-Tess"]
+license = "MIT"
+repository = "https://github.com/Fractal-Tess/pagelens"
+
+[workspace.dependencies]
+# Internal crates
+pagelens-core = { path = "crates/pagelens-core" }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Error handling
+thiserror = "2"
+
+# Async
+tokio = { version = "1", features = ["full"] }
+
+# Browser automation
+chromiumoxide = { version = "0.7", features = ["tokio-runtime"] }
+
+# Future crates (noted for later):
+# pagelens-rules  — pluggable rule/check definitions
+# pagelens-report — shared reporting & output formatting (JSON, HTML, scored summaries)

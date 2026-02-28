@@ -1,0 +1,20 @@
+[package]
+name = "pagelens-cli"
+description = "CLI interface for pagelens — run web audits from the terminal"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "pagelens"
+path = "src/main.rs"
+
+[dependencies]
+pagelens-core = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+clap = { version = "4", features = ["derive"] }

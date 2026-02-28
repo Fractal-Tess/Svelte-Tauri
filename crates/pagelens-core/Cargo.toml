@@ -1,0 +1,18 @@
+[package]
+name = "pagelens-core"
+description = "Core analysis engine for pagelens — page fetching, rendering, and web auditing tools"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+chromiumoxide = { workspace = true }
+
+[dev-dependencies]
+urlencoding = "2"
