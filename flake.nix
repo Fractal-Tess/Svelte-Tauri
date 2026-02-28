@@ -1,16 +1,27 @@
 {
-  description = "Tauri development shell";
+  description = "PageLens development shell";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default-linux";
+    playwright.url = "github:pietdevries94/playwright-web-flake";
   };
 
-  outputs = { nixpkgs, systems, ... }@inputs:
+  outputs = { nixpkgs, systems, playwright, ... }@inputs:
     let
       eachSystem = f:
-        nixpkgs.lib.genAttrs (import systems)
-          (system: f nixpkgs.legacyPackages.${system});
+        nixpkgs.lib.genAttrs (import systems) (system:
+          let
+            overlay = final: prev: {
+              inherit (playwright.packages.${system}) playwright-test playwright-driver;
+            };
+            pkgs = import nixpkgs {
+              inherit system;
+              overlays = [ overlay ];
+            };
+          in
+          f pkgs
+        );
 
       libraries = pkgs:
         with pkgs; [
@@ -44,6 +55,8 @@
 
           bun
           prettierd
+
+          playwright-test
         ];
     in
     {
@@ -52,15 +65,21 @@
           buildInputs = packages pkgs;
 
           shellHook = ''
+            export PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
+            export PLAYWRIGHT_BROWSERS_PATH="${pkgs.playwright-driver.browsers}"
+            export PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH="$(find ${pkgs.playwright-driver.browsers}/chromium-*/chrome-linux*/ -name chrome -type f | head -1)"
+
             echo "
-              ______                   
-             /_  __/___ ___  _______(_)
-              / / / __ \`/ / / / ___/ / 
-             / / / /_/ / /_/ / /  / /  
-            /_/  \__,_/\__,_/_/  /_/   
-            Tauri Development Environment
+               ____                  __
+              / __ \____ _____ ____ / /   ___  ____  _____
+             / /_/ / __ \`/ __ \`/ _ \/ /   / _ \/ __ \/ ___/
+            / ____/ /_/ / /_/ /  __/ /___/  __/ / / (__  )
+           /_/    \__,_/\__, /\___/_____/\___/_/ /_/____/
+                       /____/
+            PageLens Development Environment
             Bun - $(${pkgs.bun}/bin/bun --version)
             Rustc - $(${pkgs.rustc}/bin/rustc --version)
+            Chromium - $(ls -d ${pkgs.playwright-driver.browsers}/chromium-* 2>/dev/null | head -1 | xargs basename || echo "not found")
             " | lolcat
 
             export LD_LIBRARY_PATH=${
