@@ -1,0 +1,15 @@
+# Build folders
+build
+
+# Rust output 
+target
+
+# Cache
+.eslintcache
+
+# Nodejs
+node_modules
+.vscode
+
+# Direnv
+.direnv
