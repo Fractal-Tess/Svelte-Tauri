@@ -1,14 +1,30 @@
 <script lang="ts">
 	import { Slider as SliderPrimitive } from "bits-ui";
-	import { cn, type WithoutChildrenOrChild } from "$lib/utils.js";
+	import { cn } from "$lib/utils.js";
+	import type { Snippet } from "svelte";
+
+	type SliderProps = {
+		ref?: HTMLElement | null;
+		value?: number | number[];
+		orientation?: "horizontal" | "vertical";
+		class?: string | null | undefined;
+		min?: number;
+		max?: number;
+		step?: number;
+		disabled?: boolean;
+		autoSort?: boolean;
+		children?: Snippet<[{ thumbs: number[] }]>
+		type?: "single" | "multiple";
+	};
 
 	let {
 		ref = $bindable(null),
 		value = $bindable(),
 		orientation = "horizontal",
 		class: className,
+		type = "single",
 		...restProps
-	}: WithoutChildrenOrChild<SliderPrimitive.RootProps> = $props();
+	}: SliderProps = $props();
 </script>
 
 <!--
@@ -20,6 +36,7 @@ get along, so we shut typescript up by casting `value` to `never`.
 	bind:value={value as never}
 	data-slot="slider"
 	{orientation}
+	{type}
 	class={cn(
 		"relative flex w-full touch-none items-center select-none data-[disabled]:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:min-h-44 data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
 		className

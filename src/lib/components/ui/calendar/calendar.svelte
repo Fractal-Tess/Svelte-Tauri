@@ -6,6 +6,24 @@
 	import { isEqualMonth, type DateValue } from "@internationalized/date";
 	import type { Snippet } from "svelte";
 
+	type CalendarProps = {
+		ref?: HTMLElement | null;
+		value?: DateValue | DateValue[] | undefined;
+		placeholder?: DateValue | undefined;
+		class?: string | null | undefined;
+		weekdayFormat?: "narrow" | "short" | "long";
+		buttonVariant?: ButtonVariant;
+		captionLayout?: "dropdown" | "dropdown-months" | "dropdown-years" | "label";
+		locale?: string;
+		months?: CalendarPrimitive.MonthSelectProps["months"];
+		years?: CalendarPrimitive.YearSelectProps["years"];
+		monthFormat?: CalendarPrimitive.MonthSelectProps["monthFormat"];
+		yearFormat?: CalendarPrimitive.YearSelectProps["yearFormat"];
+		day?: Snippet<[{ day: DateValue; outsideMonth: boolean }]>;
+		disableDaysOutsideMonth?: boolean;
+		type?: "single" | "multiple";
+	};
+
 	let {
 		ref = $bindable(null),
 		value = $bindable(),
@@ -21,16 +39,9 @@
 		yearFormat = "numeric",
 		day,
 		disableDaysOutsideMonth = false,
+		type = "single",
 		...restProps
-	}: WithoutChildrenOrChild<CalendarPrimitive.RootProps> & {
-		buttonVariant?: ButtonVariant;
-		captionLayout?: "dropdown" | "dropdown-months" | "dropdown-years" | "label";
-		months?: CalendarPrimitive.MonthSelectProps["months"];
-		years?: CalendarPrimitive.YearSelectProps["years"];
-		monthFormat?: CalendarPrimitive.MonthSelectProps["monthFormat"];
-		yearFormat?: CalendarPrimitive.YearSelectProps["yearFormat"];
-		day?: Snippet<[{ day: DateValue; outsideMonth: boolean }]>;
-	} = $props();
+	}: CalendarProps = $props();
 
 	const monthFormat = $derived.by(() => {
 		if (monthFormatProp) return monthFormatProp;
@@ -49,6 +60,7 @@ get along, so we shut typescript up by casting `value` to `never`.
 	bind:placeholder
 	{weekdayFormat}
 	{disableDaysOutsideMonth}
+	{type}
 	class={cn(
 		"bg-background group/calendar p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
 		className

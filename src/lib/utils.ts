@@ -2,10 +2,37 @@ import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 import { cubicOut } from 'svelte/easing'
 import type { TransitionConfig } from 'svelte/transition'
+import type { Snippet } from 'svelte'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+/**
+ * Helper type for adding ref prop to element attributes
+ * Allows for null values since Svelte $bindable starts with null
+ */
+export type WithElementRef<
+  T,
+  ElementType extends HTMLElement = HTMLElement
+> = T & {
+  ref?: ElementType | null;
+}
+
+/**
+ * Helper type for removing the child prop
+ */
+export type WithoutChild<T> = Omit<T, 'child'>
+
+/**
+ * Helper type for removing the children prop
+ */
+export type WithoutChildren<T> = Omit<T, 'children'>
+
+/**
+ * Helper type for removing both children and child props
+ */
+export type WithoutChildrenOrChild<T> = Omit<T, 'children' | 'child'>
 
 type FlyAndScaleParams = {
   y?: number

@@ -31,3 +31,15 @@ export {
 	ElementField as FormElementField,
 	Button as FormButton,
 };
+
+export {
+	useFormField,
+	useFormControl,
+	getFormField,
+	getFormControl,
+} from "formsnap";
+
+export type {
+	UseFormFieldProps,
+	UseFormControlProps,
+} from "formsnap";
