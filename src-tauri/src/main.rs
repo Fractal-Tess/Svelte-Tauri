@@ -4,5 +4,6 @@
 )]
 
 fn main() {
-    tauri_app_lib::run();
+    pagelens_desktop_lib::run();
 }
+

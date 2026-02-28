@@ -1,19 +1,19 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauri-app",
+  "productName": "PageLens",
   "version": "0.1.0",
-  "identifier": "com.tauri-app.app",
+  "identifier": "com.pagelens.app",
   "build": {
-    "beforeDevCommand": "pnpm svelte:dev",
+    "beforeDevCommand": "bun run svelte:dev",
     "devUrl": "http://localhost:5173",
-    "beforeBuildCommand": "pnpm svelte:build",
+    "beforeBuildCommand": "bun run svelte:build",
     "frontendDist": "../dist"
   },
   "app": {
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "Svelte-Tauri",
+        "title": "PageLens",
         "width": 900,
         "height": 600,
         "fullscreen": false,
