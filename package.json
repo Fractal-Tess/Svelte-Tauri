@@ -78,7 +78,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.1",
     "@tanstack/table-core": "^8.21.3",
-    "layerchart": "2.0.0-next.43",
+    "layerchart": "2.0.0-next.46",
     "lefthook": "^2.1.1",
     "paneforge": "^1.0.2"
   }
